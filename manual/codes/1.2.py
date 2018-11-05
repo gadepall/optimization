@@ -1,6 +1,8 @@
 import numpy as np
 import scipy 
 import matplotlib.pyplot as plt
+import subprocess
+import shlex
 
 
 def sq(x):
@@ -33,8 +35,9 @@ plt.plot([c,c],[0,f_c],color=(0,0,1),marker='o',label="$f(\lambda a + (1-\lambda
 plt.plot([c,c],[0,f_c_hat],color=(1/2,2/3,3/4),marker='o',label="$\lambda f(a) + (1-\lambda)f(b)$")
 plt.plot([a,b],[f_a,f_b],color=(0,1,1))
 plt.legend(loc=2)
-#plt.savefig('../figs/1.2.eps')
-plt.show()#Reveals the plot
+plt.savefig('../figs/1.2.pdf')
+subprocess.run(shlex.split("termux-open ../figs/1.2.pdf"))
+#plt.show()#Reveals the plot
 
 
 

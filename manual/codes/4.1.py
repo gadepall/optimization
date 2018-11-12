@@ -60,6 +60,7 @@ plt.legend([bx[2], ax[0], cx[0]],['$6x_1+5x_2=27$', '$x_1+x_2=5$','$3x_1+2x_2=12
 plt.xlim(0,4)
 plt.ylim(0,5)
 plt.savefig('../figs/4.1.eps')
+plt.savefig('../figs/4.1.pdf')
 plt.show()
 
 

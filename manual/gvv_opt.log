@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.3)  5 NOV 2018 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.6)  12 NOV 2018 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,8 +821,11 @@ Underfull \vbox (badness 3460) has occurred while \output is active []
 File: ./figs/2.15.eps Graphic file (type eps)
 
 <./figs/2.15.eps> [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: ./figs/4.1.eps Graphic file (type eps)
- <./figs/4.1.eps> [7] [8
+
+<./figs/4.1.eps> [7] [8
 
 ] (./gvv_opt.aux)
 
@@ -830,12 +833,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7940 strings out of 492645
- 120647 string characters out of 6118921
+ 7941 strings out of 492645
+ 120655 string characters out of 6118921
  410624 words of memory out of 5000000
- 11687 multiletter control sequences out of 15000+600000
+ 11688 multiletter control sequences out of 15000+600000
  71906 words of font info for 179 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 36i,16n,42p,499b,1099s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,16n,42p,499b,1568s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_opt.dvi (8 pages, 44572 bytes).
+Output written on gvv_opt.dvi (8 pages, 45944 bytes).

@@ -7,7 +7,7 @@
 %\usepackage{subcaption}
 %\doublespacing
 \singlespacing
-\usepackage{multicol}
+%\usepackage{multicol}
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -331,7 +331,7 @@ Download and execute the following python script. Is  $\ln x$ convex or  concave
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.1.py
 \end{lstlisting}
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/1.1.eps}
 \caption{ $\ln x$ versus $x$}.
@@ -345,7 +345,7 @@ Modify the above python script as follows to plot the parabola $f(x) = x^2$. Is 
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.2.py
 \end{lstlisting}
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/1.2.eps}
 \caption{ $x^2$ versus $x$}.
@@ -361,7 +361,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.3.p
 \end{lstlisting}
 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/1.3.eps}
 \caption{ Segments are below the curve}.
@@ -413,7 +413,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.1.p
 \end{lstlisting}
 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.1.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$}.
@@ -520,7 +520,7 @@ f\brak{\mbf{x}} = (x_1-8)^2 + (x_2-6)^2
 \end{align}
 with constraint
 \begin{align}
-\label{convex-constraint}
+%\label{convex-constraint}
 g\brak{\mbf{x}} = x_1 + x_2 - 9 \geq 0
 \end{align}
 \end{problem}
@@ -532,7 +532,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.4.p
 \end{lstlisting}
 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.4.eps}
 \caption{ Smallest circle in the shaded region is a point.}
@@ -560,7 +560,7 @@ f\brak{\mbf{x}} = (x_1-8)^2 + (x_2-6)^2
 \end{align}
 with constraint
 \begin{align}
-\label{convex-constraint}
+%\label{convex-constraint}
 g\brak{\mbf{x}} = x_1 + x_2 - 9 \leq 0.
 \end{align}
 Summarize your observations.
@@ -573,7 +573,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.7.p
 \end{lstlisting}
 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.7.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$.}
@@ -602,7 +602,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.8.p
 \end{lstlisting}
 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.8.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$.}
@@ -614,7 +614,7 @@ Repeat problem \ref{ch2_prob_upper} using the method of Lagrange mutipliers.  Wh
 \end{problem}
 %
 \solution
-From \eqref{ch2_second_min} and \eqref{ch2_second_min}, 
+From \eqref{ch2_second_min} and \eqref{ch2_second_const}, 
 %
 \begin{align}
 L\brak{\mbf{x},\lambda} &= (x_1-8)^2 + (x_2-6)^2 - \lambda \brak{x_1 + x_2 - 18} \\
@@ -671,12 +671,12 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.9.p
 \label{ch2_prob_upper_cond}
 Solve
 	 \begin{align}
-	 \label{ch2_second_min}
+%	 \label{ch2_second_min}
 	\min_{\mbf{x}} f\brak{\mbf{x}} = (x_1-8)^2 + (x_2-6)^2
 	 \end{align}
 	 with constraint
 	 \begin{align}
-	 \label{ch2_second_const}
+%	 \label{ch2_second_const}
 	 g\brak{\mbf{x}} = x_1 + x_2 - 18 \geq 0 
 	 \end{align}
 \end{problem}	 
@@ -798,7 +798,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.12.
 %
 Note that $\mu < 0 $, contradicting the necessary condition in \eqref{ch2_kkt_necessary}. 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.12_1.eps}
 \caption{ Incorrect solution is at intersection of all curves $r = 5.33$}
@@ -807,7 +807,7 @@ Note that $\mu < 0 $, contradicting the necessary condition in \eqref{ch2_kkt_ne
 \begin{problem}
 Obtain the correct solution to the previous problem by considering $\mu = 0$.
 \end{problem}
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.12_2.eps}
 \caption{ Optimal solution is where $g_1(x)$ touches the curve $r = 4.82$}
@@ -818,7 +818,7 @@ Obtain the correct solution to the previous problem by considering $\mu = 0$.
 \begin{problem}
 Solve
  \begin{align}
- \label{ch2_kkt_problem}
+% \label{ch2_kkt_problem}
 \min_{\mbf{x}} f\brak{\mbf{x}} = 4x_1^2 + 2x_2^2
  \end{align}
  with constraints
@@ -944,7 +944,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.15.
 
 %
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.15.eps}
 \caption{ Optimal solution is the lower tangent to the circle}
@@ -975,6 +975,7 @@ x_{12} & x_{22}
 %
 is known as a semi-definite program.  Find a numerical solution to this problem. Compare with the solution 
 in problem  \ref{convex_sdp_eqiv}.
+\label{prob:cvxopt}
 \end{problem}
 \solution The {\em cvxopt} solver needs to be used in order to find a numerical solution.  For this, the given problem has to be reformulated as
 \begin{align}
@@ -1036,6 +1037,32 @@ The following script provides the solution to this problem.
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/3.1.py
 \end{lstlisting}
 %
+\begin{problem}
+Frame Problem \ref{prob:cvxopt} in terms of matrices.
+\end{problem}
+\solution
+Let
+\begin{equation}
+\mbf{X} = 
+\begin{pmatrix}
+x_{11} & x_{12} \\
+x_{12} & x_{22}
+\end{pmatrix} 
+%& \succeq 0 \quad  \brak{\text{$\succeq$ means positive definite}}
+\end{equation}
+Then
+\begin{equation}
+x_{11} + x_{12} = 
+\begin{pmatrix}
+1 & 1
+\end{pmatrix}
+\mbf{X}
+\begin{pmatrix}
+0 
+\\
+0
+\end{pmatrix}
+\end{equation}
 \begin{problem}
 Repeat the previous exercise using {\em cvxpy}
 \end{problem}
@@ -1244,7 +1271,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.1.p
 \end{lstlisting}
 
 %
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\columnwidth]{./figs/4.1.eps}
 \caption{ The cost function intersects with the two constraints at $\mbf{x} = \brak{2,3}$. }
@@ -1309,8 +1336,6 @@ Repeat the previous exercise using {\em cvxpy}
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.2-cvx.py
 \end{lstlisting}
-
-
 
 \begin{problem}
 	Verify your solution to the above problem using the method of Lagrange multipliers.

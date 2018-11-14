@@ -331,7 +331,7 @@ Download and execute the following python script. Is  $\ln x$ convex or  concave
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.1.py
 \end{lstlisting}
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/1.1.eps}
 \caption{ $\ln x$ versus $x$}.
@@ -345,7 +345,7 @@ Modify the above python script as follows to plot the parabola $f(x) = x^2$. Is 
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.2.py
 \end{lstlisting}
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/1.2.eps}
 \caption{ $x^2$ versus $x$}.
@@ -361,7 +361,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.3.p
 \end{lstlisting}
 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/1.3.eps}
 \caption{ Segments are below the curve}.
@@ -413,7 +413,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.1.p
 \end{lstlisting}
 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.1.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$}.
@@ -532,7 +532,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.4.p
 \end{lstlisting}
 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.4.eps}
 \caption{ Smallest circle in the shaded region is a point.}
@@ -573,7 +573,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.7.p
 \end{lstlisting}
 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.7.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$.}
@@ -602,7 +602,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.8.p
 \end{lstlisting}
 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.8.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$.}
@@ -798,7 +798,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.12.
 %
 Note that $\mu < 0 $, contradicting the necessary condition in \eqref{ch2_kkt_necessary}. 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.12_1.eps}
 \caption{ Incorrect solution is at intersection of all curves $r = 5.33$}
@@ -807,7 +807,7 @@ Note that $\mu < 0 $, contradicting the necessary condition in \eqref{ch2_kkt_ne
 \begin{problem}
 Obtain the correct solution to the previous problem by considering $\mu = 0$.
 \end{problem}
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.12_2.eps}
 \caption{ Optimal solution is where $g_1(x)$ touches the curve $r = 4.82$}
@@ -944,7 +944,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.15.
 
 %
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.15.eps}
 \caption{ Optimal solution is the lower tangent to the circle}
@@ -961,17 +961,24 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.15.
 \label{ch3_convex_ch2}
 The problem
 \begin{equation}
-\min_{\mbf{x}} x_{11} + x_{12}
+\min_{\mbf{X}} x_{11} + x_{12}
 \end{equation}
 %	
 with constraints
 \begin{align}
 x_{11} + x_{22} &= 1 \\	
+\mbf{X}
+& \succeq 0 \quad  \brak{\text{$\succeq$ means positive definite}}
+\end{align}
+%
+where
+\begin{equation}
+\mbf{X}=
 \begin{pmatrix}
 x_{11} & x_{12} \\
 x_{12} & x_{22}
-\end{pmatrix} & \succeq 0 \quad  \brak{\text{$\succeq$ means positive definite}}
-\end{align}
+\end{pmatrix} 
+\end{equation}
 %
 is known as a semi-definite program.  Find a numerical solution to this problem. Compare with the solution 
 in problem  \ref{convex_sdp_eqiv}.
@@ -1041,28 +1048,40 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/3.1.p
 Frame Problem \ref{prob:cvxopt} in terms of matrices.
 \end{problem}
 \solution
-Let
-\begin{equation}
-\mbf{X} = 
-\begin{pmatrix}
-x_{11} & x_{12} \\
-x_{12} & x_{22}
-\end{pmatrix} 
-%& \succeq 0 \quad  \brak{\text{$\succeq$ means positive definite}}
-\end{equation}
-Then
+It is easy to verify that
 \begin{equation}
 x_{11} + x_{12} = 
 \begin{pmatrix}
 1 & 1
 \end{pmatrix}
-\mbf{X}
+\mbf{X}^{T}
 \begin{pmatrix}
 0 
 \\
 0
 \end{pmatrix}
 \end{equation}
+and
+\begin{equation}
+x_{11} + x_{22} = 
+\begin{pmatrix}
+1 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+\mbf{X} & \mbf{0} \\
+\mbf{0} & \mbf{X}
+\end{pmatrix}
+\begin{pmatrix}
+1
+\\
+0 
+\\
+0
+\\
+1
+\end{pmatrix}
+\end{equation}
+
 \begin{problem}
 Repeat the previous exercise using {\em cvxpy}
 \end{problem}
@@ -1271,7 +1290,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.1.p
 \end{lstlisting}
 
 %
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/4.1.eps}
 \caption{ The cost function intersects with the two constraints at $\mbf{x} = \brak{2,3}$. }

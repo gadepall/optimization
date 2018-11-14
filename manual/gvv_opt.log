@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.6)  14 NOV 2018 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  14 NOV 2018 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,29 +675,16 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
 File: ./figs/1.1.eps Graphic file (type eps)
  <./figs/1.1.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: ./figs/1.2.eps Graphic file (type eps)
-<./figs/1.2.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ <./figs/1.2.eps>
 File: ./figs/1.3.eps Graphic file (type eps)
-<./figs/1.3.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1
+ <./figs/1.3.eps> [1
 
 
 ]
 File: ./figs/2.1.eps Graphic file (type eps)
- <./figs/2.1.eps>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+<./figs/2.1.eps>
 Underfull \vbox (badness 1038) has occurred while \output is active []
 
 
@@ -707,15 +694,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: ./figs/2.4.eps Graphic file (type eps)
 
 <./figs/2.4.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: ./figs/2.7.eps Graphic file (type eps)
-<./figs/2.7.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./figs/tab.2.7.tex
+ <./figs/2.7.eps> (./figs/tab.2.7.tex
 \gnumericTableWidth=\skip68
 \gnumericTableWidthComplete=\skip69
 \gnumericMultiRowLength=\skip70
@@ -736,15 +716,8 @@ Underfull \vbox (badness 1286) has occurred while \output is active []
 File: ./figs/2.12_1.eps Graphic file (type eps)
 
 <./figs/2.12_1.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: ./figs/2.12_2.eps Graphic file (type eps)
-<./figs/2.12_2.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+ <./figs/2.12_2.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
@@ -753,8 +726,11 @@ Underfull \vbox (badness 3460) has occurred while \output is active []
 File: ./figs/2.15.eps Graphic file (type eps)
 
 <./figs/2.15.eps> [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: ./figs/4.1.eps Graphic file (type eps)
- <./figs/4.1.eps> [7] [8
+
+<./figs/4.1.eps> [7] [8
 
 ] (./gvv_opt.aux) ) 
 Here is how much of TeX's memory you used:
@@ -766,4 +742,4 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  36i,16n,42p,499b,1099s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_opt.dvi (8 pages, 46460 bytes).
+Output written on gvv_opt.dvi (8 pages, 46948 bytes).

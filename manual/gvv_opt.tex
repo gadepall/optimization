@@ -1056,7 +1056,7 @@ x_{11} + x_{12} =
 \end{pmatrix}
 \mbf{X}^{T}
 \begin{pmatrix}
-0 
+1 
 \\
 0
 \end{pmatrix}
@@ -1081,9 +1081,48 @@ x_{11} + x_{22} =
 1
 \end{pmatrix}
 \end{equation}
-
+%
+Thus, Problem \ref{prob:cvxopt} can be expressed as
+\begin{equation}
+\begin{split}
+\min_{\mbf{X}} 
+\begin{pmatrix}
+1 & 1
+\end{pmatrix}
+\mbf{X}^{T}
+\begin{pmatrix}
+1 
+\\
+0
+\end{pmatrix}
+& \quad s.t
+\\
+\begin{pmatrix}
+1 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+\mbf{X} & \mbf{0} \\
+\mbf{0} & \mbf{X}
+\end{pmatrix}
+\begin{pmatrix}
+1
+\\
+0 
+\\
+0
+\\
+1
+\end{pmatrix}
+&=1,
+\\
+\mbf{X}
+ & \succeq 0 
+\end{split}
+\label{prob:cvxpy}
+\end{equation}
+%	
 \begin{problem}
-Repeat the previous exercise using {\em cvxpy}
+Solve \eqref{prob:cvxpy} using {\em cvxpy}.
 \end{problem}
 %
 \solution

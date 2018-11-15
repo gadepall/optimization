@@ -1,10 +1,25 @@
-from cvxpy import *
-x = Variable((2,2),PSD = True)
-f = x[0][0] + x[0][1]
-obj = Minimize(f)
-constraints = [x[0][0] + x[1][1] == 1]
+#Code by GVV Sharma, Novermber 15, 2018
+#Released under GNU GPL
+#Semi definite programming example
+import cvxpy as cvx
+from numpy import matrix, round, eye
 
-Problem(obj, constraints).solve()
-print ("Minimum of f(x) is ",round(f.value,2), " at  \
-(",round(x[0][0].value,2),",",round(x[0][1].value,2),")") 
+#Create Variable
+X = cvx.Variable((2,2),PSD = True)
+
+#Create constant vectors/matrices
+B = eye(2)
+v = matrix([[1],[0]])
+u = matrix([[1],[1]])
+w = matrix([[1, 0, 0, 1]])
+
+#Define the problem
+f =  u.transpose()*X.T*v
+obj = cvx.Minimize(f)
+T = cvx.bmat([[X,B],[B,X]])
+constraints = [w*T*w.transpose() == 1]
+
+#solution
+cvx.Problem(obj, constraints).solve()
+print ("Minimum of f(x) is ",round(f.value,2),"at X=", X.value )
 

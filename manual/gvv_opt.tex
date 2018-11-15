@@ -1408,6 +1408,63 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.2-c
 	 \text{ where } x_1,x_2 &\geq 0 \nonumber
 	 \end{align}	
 \end{problem}
+\section{Gradient Descent Method}
+Consider the problem of finding the square root of a number $c$.  This can be expressed as the equation
+%
+\begin{equation}
+\label{eq:root}
+x^2 -c= 0
+\end{equation}
+%
+\begin{problem}
+Sketch the function 
+%
+\begin{equation}
+f(x)= x^{3}-3xc
+\end{equation}
+%
+and comment upon its convexity.
+\end{problem}
+\begin{problem}
+Show that \eqref{eq:root} results from
+\begin{align}
+\min_{x}f(x)= x^{3}-3xc
+\end{align}
+\end{problem}
+\begin{problem}
+Find a numerical solution for \eqref{eq:root}.
+\end{problem}
+\solution
+A numerical solution for \eqref{eq:root} is obtained as
+%
+\begin{align}
+x_{n+1}&=x_{n}-\mu f^{\prime}\brak{x}
+\\
+&=x_{n} -\mu \brak{3x_n^{2}-3c}
+\label{eq:gradient}
+\end{align}
+
+%\begin{align}
+%x_{n+1}&=x_{n}-{\frac {f(x_{n})}{f^{\prime}(x_{n})}}
+%\\
+%&=x_{n} -\frac{x^2_{n}-c}{2x_n} 
+%\\
+%&=\frac{1}{2}\sbrak{x_{n} +\frac{c}{x_n} }
+%\label{eq:newton}
+%\end{align}
+%
+where $x_0$ is an inital guess.
+%
+\begin{problem}
+Write a program to implement \eqref{eq:gradient}.
+\end{problem}
+%
+\solution Download
+\begin{lstlisting}
+svn checkout https://github.com/gadepall/EE5347/trunk/lms/codes
+cd codes
+\end{lstlisting}
+Execute \textbf{square\_root.py}.
 
 \end{document}
 

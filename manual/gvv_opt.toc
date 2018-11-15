@@ -3,3 +3,4 @@
 \contentsline {subsection}{\numberline {2.1}Karush Kuhn-Tucker Conditions}{2}
 \contentsline {section}{\numberline {3}Semi-definite Programming}{6}
 \contentsline {section}{\numberline {4}Linear Programming}{7}
+\contentsline {section}{\numberline {5}Gradient Descent Method}{8}

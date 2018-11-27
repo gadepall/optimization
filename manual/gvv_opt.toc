@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {1}Convex Functions}{1}
-\contentsline {section}{\numberline {2}Convex Optimization}{2}
-\contentsline {subsection}{\numberline {2.1}Karush Kuhn-Tucker Conditions}{2}
-\contentsline {section}{\numberline {3}Semi-definite Programming}{6}
-\contentsline {section}{\numberline {4}Linear Programming}{7}
-\contentsline {section}{\numberline {5}Gradient Descent Method}{8}
+\contentsline {section}{\numberline {2}Gradient Descent Method}{2}
+\contentsline {section}{\numberline {3}Convex Optimization}{2}
+\contentsline {subsection}{\numberline {3.1}Karush Kuhn-Tucker Conditions}{2}
+\contentsline {section}{\numberline {4}Semi-definite Programming}{7}
+\contentsline {section}{\numberline {5}Linear Programming}{8}

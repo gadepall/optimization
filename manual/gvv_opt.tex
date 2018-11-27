@@ -7,6 +7,7 @@
 %\usepackage{subcaption}
 %\doublespacing
 \singlespacing
+\usepackage{enumitem}
 %\usepackage{multicol}
 %\usepackage{graphicx}
 %\usepackage{amssymb}
@@ -248,67 +249,12 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 
 \tableofcontents
 
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
 
-%\begin{abstract}
-%%\boldmath
-%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
-%
-%\end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
-
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%Cooperative diversity, decode and forward, piecewise linear
-%\end{IEEEkeywords}
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-\IEEEpeerreviewmaketitle
-
-
-%\newpage
-%
-%
-
-%%\newpage
-
-%%\newpage
-%
-
-%%\newpage
-%\section{Linear Programming}
-%\input{chapter4}
-
-%\newpage
-%\section{Application in Research}
-%\input{revision}
-
-
-%\bibliography{IEEEabrv,gvv_opt}
-
-%\input{chapter2} 
-%%
-%\newpage
-%\section{$M$-ary Modulation}
-%\input{chapter3} 
-%
-%\newpage
-%\section{BER in Rayleigh Flat Slowly Fading Channels}
-%\input{chapter4} 
-
+\begin{abstract}
+This manual provides a simple introduction to various concepts in optimization.
+\end{abstract}
 
 
 %\chapter{The Optimum Receiver}
@@ -323,9 +269,11 @@ f\sbrak{\lambda x + \brak{1-\lambda}y} \leq \lambda f\brak{x} + \brak{1-\lambda}
 \end{align}
 %
 for $\quad 0 < \lambda < 1$.
-\begin{problem}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+
+\item
 Download and execute the following python script. Is  $\ln x$ convex or  concave?
-\end{problem}
+
 %
 \begin{lstlisting}[language=sh]
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.1.py
@@ -338,9 +286,9 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.1.p
 \label{fig.1.1}	
 \end{figure}
 %
-\begin{problem}
+\item
 Modify the above python script as follows to plot the parabola $f(x) = x^2$. Is it convex or concave?
-\end{problem}
+
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.2.py
 \end{lstlisting}
@@ -352,9 +300,9 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.2.p
 \label{fig.1.2}	
 \end{figure}
 %
-\begin{problem}
+\item
 Execute the following script to obtain Fig. \ref{fig.1.3}. Comment.
-\end{problem}
+
 %
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.3.py
@@ -368,23 +316,83 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/1.3.p
 \label{fig.1.3}	
 \end{figure}
 %
-\begin{problem}
+\item
 Modify the script in the previous problem for $f(x) = x^2$.  What can you conclude?
-\end{problem}
-\begin{problem}
+
+\item
 Let 
 \begin{equation}
 f(\mathbf{x}) = x_1x_2, \quad \mathbf{x} \in \mathbf{R}^2
 \end{equation}
 Sketch $f(\mathbf{x})$ and deduce whether it is convex.
 Can you theoretically explain your observation using \eqref{ch1_convex_def}?
-\end{problem}
+\end{enumerate}
 %
+\section{Gradient Descent Method}
+Consider the problem of finding the square root of a number $c$.  This can be expressed as the equation
+%
+\begin{equation}
+\label{eq:root}
+x^2 -c= 0
+\end{equation}
+%
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+
+\item
+Sketch the function for different values of $c$
+%
+\begin{equation}
+f(x)= x^{3}-3xc
+\end{equation}
+%
+and comment upon its convexity.
+
+\item
+Show that \eqref{eq:root} results from
+\begin{align}
+\min_{x}f(x)= x^{3}-3xc
+\end{align}
+
+\item
+Find a numerical solution for \eqref{eq:root}.
+
+\solution
+A numerical solution for \eqref{eq:root} is obtained as
+%
+\begin{align}
+x_{n+1}&=x_{n}-\mu f^{\prime}\brak{x}
+\\
+&=x_{n} -\mu \brak{3x_n^{2}-3c}
+\label{eq:gradient}
+\end{align}
+
+%\begin{align}
+%x_{n+1}&=x_{n}-{\frac {f(x_{n})}{f^{\prime}(x_{n})}}
+%\\
+%&=x_{n} -\frac{x^2_{n}-c}{2x_n} 
+%\\
+%&=\frac{1}{2}\sbrak{x_{n} +\frac{c}{x_n} }
+%\label{eq:newton}
+%\end{align}
+%
+where $x_0$ is an inital guess.
+%
+\item
+Write a program to implement \eqref{eq:gradient}.
+
+%
+\solution Download and execute
+\begin{lstlisting}
+wget 
+https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/square_root.py
+\end{lstlisting}
+\end{enumerate}
 
 \section{Convex Optimization}
 \subsection{Karush Kuhn-Tucker Conditions}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 
-\begin{problem}
+\item
 	\label{convex_code}
 	Plot the circles 
 %
@@ -406,7 +414,7 @@ using the following program.	From the graph, find
 	g\brak{\mbf{x}} = x_1 + x_2 - 9 = 0
 \end{align}
 %
-\end{problem}
+
 %	
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.1.py
@@ -420,9 +428,9 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.1.p
 \label{fig.2.1}	
 \end{figure}
 %
-\begin{problem}
+\item
 Obtain a theoretical solution for problem \ref{convex_code} using coordinate geometry.
-\end{problem}
+
 \solution 
 From \eqref{eq2_1_line} and \eqref{eq2_1_circ}, 
 %
@@ -434,7 +442,7 @@ r^2 & = (x_1-8)^2 + (3- x_1)^2 \\
 %
 which is minium when $x_1 = \frac{11}{2}, x_2 = \frac{7}{2}$.  The minimum value is $\frac{25}{2}$ and 
 the radius $r = \frac{5}{\sqrt{2}}$.
-\begin{problem}
+\item
 \label{lagrange}
 	Define 
 	\begin{equation}
@@ -458,7 +466,7 @@ Solve the equations
 \end{align}
 %
 How is this related to problem \ref{convex_code}? What is the sign of $\lambda$?  $L$ is known as the Lagrangian and the above technique is known as the Method of Lagrange Multipliers.
-\end{problem}
+
 \solution
 From \eqref{eq2_1_line} and \eqref{eq2_1_circ}, 
 %
@@ -512,7 +520,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.3.p
 \end{lstlisting}
 
 %
-\begin{problem}
+\item
 \label{ch2_constraint}
 Modify the code in problem \ref{convex_code} to find a graphical solution for minimising
 \begin{align}
@@ -523,7 +531,7 @@ with constraint
 %\label{convex-constraint}
 g\brak{\mbf{x}} = x_1 + x_2 - 9 \geq 0
 \end{align}
-\end{problem}
+
 \solution 
 This problem reduces to finding the radius of the smallest circle in the shaded area in Fig. \ref{fig.2.4} .  It is clear that this radius is 0.
 %	
@@ -539,20 +547,20 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.4.p
 \label{fig.2.4}	
 \end{figure}
 %
-\begin{problem}
+\item
 \label{ch2_lagrange_fail}
 Now use the method of Lagrange multipliers to solve  problem \ref{ch2_constraint} and compare with the graphical solution.  Comment.
-\end{problem}
+
 %
 \solution Using the method of Lagrange multipliers, the solution is the same as the one obtained in  problem \ref{ch2_constraint}, which is different from the graphical solution.  This means that the Lagrange multipliers method cannot be applied blindly.
-\begin{problem}
+\item
 Repeat problem \ref{ch2_lagrange_fail} by keeping 
  $\lambda=0$.   Comment.
-\end{problem}
+
 \solution Keeping $\lambda = 0$ results in $x_1 = 8, x_2 = 6$, which is the correct solution.  The minimum value of $f\brak{\mbf{x}}$ without any constraints lies in the region $g\brak{\mbf{x}} = 0$.  In this case, $\lambda = 0$.  
 %
 %
-\begin{problem}
+\item
 \label{ch2_constraint_border}
 Find a graphical solution for minimising
 \begin{align}
@@ -564,7 +572,7 @@ with constraint
 g\brak{\mbf{x}} = x_1 + x_2 - 9 \leq 0.
 \end{align}
 Summarize your observations.
-\end{problem}
+
 %
 \solution In Fig. \ref{fig.2.7}, the shaded region represents the constraint.  Thus, the solution is the same as the one in problem \ref{ch2_constraint}. This implies that the method of
 Lagrange multipliers can be used to solve the optimization problem with this inequality constraint as well.  Table \ref{table.2.7} summarizes the conditions for this based on the observations so far.
@@ -581,7 +589,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.7.p
 \end{figure}
 \input{./figs/tab.2.7.tex}
 %
-\begin{problem}
+\item
 \label{ch2_prob_upper}
 Find a graphical solution for 	 
 	 \begin{align}
@@ -593,7 +601,7 @@ Find a graphical solution for
 	 \label{ch2_second_const}
 	 g\brak{\mbf{x}} = x_1 + x_2 - 18 = 0
 	 \end{align}
-\end{problem}	 
+	 
 %
 \solution
 %	
@@ -609,9 +617,9 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.8.p
 \label{fig.2.8}	
 \end{figure}
 %
-\begin{problem}
+\item
 Repeat problem \ref{ch2_prob_upper} using the method of Lagrange mutipliers.  What is the sign of $\lambda$?
-\end{problem}
+
 %
 \solution
 From \eqref{ch2_second_min} and \eqref{ch2_second_const}, 
@@ -667,7 +675,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.9.p
 
 %
 %
-\begin{problem}
+\item
 \label{ch2_prob_upper_cond}
 Solve
 	 \begin{align}
@@ -679,11 +687,11 @@ Solve
 %	 \label{ch2_second_const}
 	 g\brak{\mbf{x}} = x_1 + x_2 - 18 \geq 0 
 	 \end{align}
-\end{problem}	 
+	 
 %
 \solution Since the unconstrained solution is outside the region $g\brak{\mbf{x}} \geq 0$, the solution is the same as the one in problem \ref{ch2_prob_upper}.
 %
-\begin{problem}
+\item
 Based on the problems so far, generalise the Lagrange multipliers method for 
 %
 	 \begin{align}
@@ -692,7 +700,7 @@ Based on the problems so far, generalise the Lagrange multipliers method for
 	 g\brak{\mbf{x}}  \geq 0 
 	 \end{align}
 %
-\end{problem}
+
 %
 \solution
 Considering $L\brak{\mbf{x},\lambda} = f\brak{\mbf{x}} - \lambda g\brak{\mbf{x}}$, for $g\brak{\mbf{x}} = x_1 + x_2 - 18 \geq 0$ we found $\lambda > 0 $ and for $g\brak{\mbf{x}} = x_1 + x_2 - 9 \leq 0, \lambda < 0$. A single condition can be obtained by framing the optimization problem as
@@ -717,7 +725,7 @@ provided
 \nabla L\brak{\mbf{x},\lambda} = 0 \Rightarrow \lambda > 0
 \end{equation}
 else, $\lambda = 0$.
-\begin{problem}
+\item
 Solve
  \begin{align}
  \label{ch2_kkt_problem}
@@ -728,7 +736,7 @@ Solve
  g_1\brak{\mbf{x}} = 3x_1 + x_2-8 = 0\\
  g_2 \brak{\mbf{x}}= 15 - 2x_1 - 4x_2 \geq 0
  \end{align}
- \end{problem}
+ 
 %
 \solution Considering the Lagrangian
 %
@@ -804,9 +812,9 @@ Note that $\mu < 0 $, contradicting the necessary condition in \eqref{ch2_kkt_ne
 \caption{ Incorrect solution is at intersection of all curves $r = 5.33$}
 \label{fig.2.12}	
 \end{figure}
-\begin{problem}
+\item
 Obtain the correct solution to the previous problem by considering $\mu = 0$.
-\end{problem}
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{./figs/2.12_2.eps}
@@ -815,7 +823,7 @@ Obtain the correct solution to the previous problem by considering $\mu = 0$.
 \end{figure}
 %
 %
-\begin{problem}
+\item
 Solve
  \begin{align}
 % \label{ch2_kkt_problem}
@@ -826,12 +834,12 @@ Solve
  g_1\brak{\mbf{x}} = 3x_1 + x_2-8 = 0\\
  g_2 \brak{\mbf{x}}= 15 - 2x_1 - 4x_2 \leq 0
  \end{align}
- \end{problem}
+ 
 %
-\begin{problem}
+\item
 Based on whatever you have done so far,	list the steps that you would use in general for solving a convex optimization problem  like \eqref{ch2_kkt_problem}  using Lagrange Multipliers. 
 These are called Karush-Kuhn-Tucker(KKT) conditions.
-\end{problem}
+
 \solution For a problem defined by 
 \begin{align}
 \mbf{x^*} &= \min_{\mbf{x}}f(\mbf{x})
@@ -859,7 +867,7 @@ using the KKT conditions
 \text{and }\mu_i \ge 0, \forall i = 1,..,n
 \end{align}
 %
-\begin{problem}
+\item
 	Maxmimize 
 	%
 	\begin{align}
@@ -873,9 +881,9 @@ using the KKT conditions
 	x_1 \geq 0,& x_2 &\geq 0
 	\end{align}
 	%
-\end{problem}
+
 %
-\begin{problem}
+\item
 	\label{convex_sdp_eqiv}
 	%
 	Solve
@@ -895,7 +903,7 @@ x_1 \\
 x_2
 \end{pmatrix}
 $
-\end{problem}
+
 \solution Using the method of Lagrange multipliers,
 %
 \begin{align}
@@ -951,12 +959,14 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/2.15.
 \label{fig.2.15}	
 \end{figure}
 %
+\end{enumerate}
 
 \section{Semi-definite Programming}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 
 %\subsection{Karush Kuhn-Tucker Conditions}
 
-\begin{problem}
+\item
 %
 \label{ch3_convex_ch2}
 The problem
@@ -983,7 +993,7 @@ x_{12} & x_{22}
 is known as a semi-definite program.  Find a numerical solution to this problem. Compare with the solution 
 in problem  \ref{convex_sdp_eqiv}.
 \label{prob:cvxopt}
-\end{problem}
+
 \solution The {\em cvxopt} solver needs to be used in order to find a numerical solution.  For this, the given problem has to be reformulated as
 \begin{align}
 &\min_{\mbf{x}}  
@@ -1044,9 +1054,9 @@ The following script provides the solution to this problem.
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/3.1.py
 \end{lstlisting}
 %
-\begin{problem}
+\item
 Frame Problem \ref{prob:cvxopt} in terms of matrices.
-\end{problem}
+
 \solution
 It is easy to verify that
 \begin{equation}
@@ -1121,16 +1131,16 @@ Thus, Problem \ref{prob:cvxopt} can be expressed as
 \label{prob:cvxpy}
 \end{equation}
 %	
-\begin{problem}
+\item
 Solve \eqref{prob:cvxpy} using {\em cvxpy}.
-\end{problem}
+
 %
 \solution
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/3.1-cvx.py
 \end{lstlisting}
 
-\begin{problem}
+\item
 Minimize 
 \begin{equation}
 -x_{11} - 2x_{12} - 5x_{22}
@@ -1147,7 +1157,7 @@ x_{12} & x_{22}
 \end{pmatrix} & \succeq 0 
 \end{align}
 using {\em cvxopt}.
-\end{problem}
+
 %\solution
 %In this problem, there is an SDP inequality and several linear inequalities.  The linear inequalities can be combined to obtain the matrix inequality
 %%
@@ -1294,20 +1304,22 @@ using {\em cvxopt}.
 %\end{pmatrix} 
 %\end{align}
 %%
-\begin{problem}
+\item
 	Repeat the above exercise by converting the problem into a convex optimization problem in two variables and using graphical plots.  
-\end{problem}
-\begin{problem}
+
+\item
 	Solve the above problem using the KKT conditions.  Comment.
-\end{problem}
+
+\end{enumerate}
 	
 \section{Linear Programming}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 	
 	
 
 
 %\subsection{Karush Kuhn-Tucker Conditions}
-\begin{problem}
+\item
 \label{ch1_lp1}
 	Graphically obtain a solution to the following 
 	\begin{align}
@@ -1319,7 +1331,7 @@ using {\em cvxopt}.
 	3x_1 + 2x_2 &\leq 12\\
 	\text{ where } x_1,x_2 &\geq 0
 	\end{align}
-\end{problem}
+
 %
 \solution
 The following program plots the solution in Fig. \ref{fig.4.1}
@@ -1336,9 +1348,9 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.1.p
 \label{fig.4.1}	
 \end{figure}
 %
-\begin{problem}
+\item
 	Now use {\em cvxopt} to obtain a solution to problem \ref{ch1_lp1}.
-\end{problem}
+
 \solution
 The given problem is expressed as follows
 %
@@ -1387,19 +1399,19 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.2.p
 \end{lstlisting}
 
 
-\begin{problem}
+\item
 Repeat the previous exercise using {\em cvxpy}
-\end{problem}
+
 \solution
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.2-cvx.py
 \end{lstlisting}
 
-\begin{problem}
+\item
 	Verify your solution to the above problem using the method of Lagrange multipliers.
-\end{problem}
+
 %
-\begin{problem}
+\item
 	 Maximise $5x_1 + 3x_2$ w.r.t the constraints
 	 \begin{align}
 	 x_1 + x_2 &\leq 2 \nonumber\\
@@ -1407,64 +1419,7 @@ wget https://raw.githubusercontent.com/gadepall/EE2250/master/manual/codes/4.2-c
 	 3x_1 + 8x_2 &\leq 12 \nonumber\\
 	 \text{ where } x_1,x_2 &\geq 0 \nonumber
 	 \end{align}	
-\end{problem}
-\section{Gradient Descent Method}
-Consider the problem of finding the square root of a number $c$.  This can be expressed as the equation
-%
-\begin{equation}
-\label{eq:root}
-x^2 -c= 0
-\end{equation}
-%
-\begin{problem}
-Sketch the function for different values of $c$
-%
-\begin{equation}
-f(x)= x^{3}-3xc
-\end{equation}
-%
-and comment upon its convexity.
-\end{problem}
-\begin{problem}
-Show that \eqref{eq:root} results from
-\begin{align}
-\min_{x}f(x)= x^{3}-3xc
-\end{align}
-\end{problem}
-\begin{problem}
-Find a numerical solution for \eqref{eq:root}.
-\end{problem}
-\solution
-A numerical solution for \eqref{eq:root} is obtained as
-%
-\begin{align}
-x_{n+1}&=x_{n}-\mu f^{\prime}\brak{x}
-\\
-&=x_{n} -\mu \brak{3x_n^{2}-3c}
-\label{eq:gradient}
-\end{align}
 
-%\begin{align}
-%x_{n+1}&=x_{n}-{\frac {f(x_{n})}{f^{\prime}(x_{n})}}
-%\\
-%&=x_{n} -\frac{x^2_{n}-c}{2x_n} 
-%\\
-%&=\frac{1}{2}\sbrak{x_{n} +\frac{c}{x_n} }
-%\label{eq:newton}
-%\end{align}
-%
-where $x_0$ is an inital guess.
-%
-\begin{problem}
-Write a program to implement \eqref{eq:gradient}.
-\end{problem}
-%
-\solution Download
-\begin{lstlisting}
-svn checkout https://github.com/gadepall/EE5347/trunk/lms/codes
-cd codes
-\end{lstlisting}
-Execute \textbf{square\_root.py}.
-
+\end{enumerate}
 \end{document}
 

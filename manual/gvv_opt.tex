@@ -969,7 +969,7 @@ Based on the problems so far, generalise the Lagrange multipliers method for
 
 %
 \solution
-Considering $L\brak{\mbf{x},\lambda} = f\brak{\mbf{x}} - \lambda g\brak{\mbf{x}}$, for $g\brak{\mbf{x}} = x_1 + x_2 - 18 \geq 0$ we found $\lambda > 0 $ and for $g\brak{\mbf{x}} = x_1 + x_2 - 9 \leq 0, \lambda < 0$. A single condition can be obtained by framing the optimization problem as
+Considering $L\brak{\mbf{x},\lambda} = f\brak{\mbf{x}} - \lambda g\brak{\mbf{x}}$, for $g\brak{\mbf{x}} = \myvec{1 & 1}\vec{x} - 18 \geq 0$ we found $\lambda > 0 $ and for $g\brak{\mbf{x}} = \myvec{1 & 1}\vec{x} - 9 \leq 0, \lambda < 0$. A single condition can be obtained by framing the optimization problem as
 %
 	 \begin{align}
 	 \label{ch2_lagrange_ineq_summary}
@@ -996,29 +996,30 @@ else, $\lambda = 0$.
 Solve
  \begin{align}
  \label{ch2_kkt_problem}
-\min_{\mbf{x}} f\brak{\mbf{x}} = 4x_1^2 + 2x_2^2
+\min_{\mbf{x}} f\brak{\mbf{x}} = \vec{x}^T\myvec{4 & 0 \\0 & 2}\vec{x}
+%4x_1^2 + 2x_2^2
  \end{align}
  with constraints
  \begin{align}
- g_1\brak{\mbf{x}} = 3x_1 + x_2-8 = 0\\
- g_2 \brak{\mbf{x}}= 15 - 2x_1 - 4x_2 \geq 0
+ g_1\brak{\mbf{x}} = \myvec{3 & 1}\vec{x}-8 = 0\\
+ g_2 \brak{\mbf{x}}= 15 - \myvec{2 & 4}\vec{x} \geq 0
  \end{align}
  
 %
 \solution Considering the Lagrangian
 %
 \begin{align}
-L\brak{\mbf{x},\lambda} &= f\brak{\mbf{x}} + \lambda g_1\brak{\mbf{x}} - \mu g_2\brak{\mbf{x}} \\
- &= 4x_1^2 + 2x_2^2 + \lambda \brak{3x_1 + x_2-8} 
- \nonumber \\
- &\,-\mu\brak{15 - 2x_1 - 4x_2},\\
- \nabla L\brak{\mbf{x},\lambda}  & = 
-\begin{pmatrix}
-8x_1 + 3 \lambda  +2 \mu  \\
-4x_2 + \lambda + 4 \mu \\
-3x_1 + x_2 -8 \\
- - 2x_1 - 4x_2 + 15
-\end{pmatrix}
+%L\brak{\mbf{x},\lambda} &= f\brak{\mbf{x}} + \lambda g_1\brak{\mbf{x}} - \mu g_2\brak{\mbf{x}} \\
+% &= 4x_1^2 + 2x_2^2 + \lambda \brak{3x_1 + x_2-8} 
+% \nonumber \\
+% &\,-\mu\brak{15 - 2x_1 - 4x_2},\\
+ \nabla L\brak{\mbf{x},\lambda, \mu}  %& = 
+%\begin{pmatrix}
+%8x_1 + 3 \lambda  +2 \mu  \\
+%4x_2 + \lambda + 4 \mu \\
+%3x_1 + x_2 -8 \\
+% - 2x_1 - 4x_2 + 15
+%\end{pmatrix}
 = 0
 \end{align}
 %
@@ -1094,12 +1095,16 @@ Obtain the correct solution to the previous problem by considering $\mu = 0$.
 Solve
  \begin{align}
 % \label{ch2_kkt_problem}
-\min_{\mbf{x}} f\brak{\mbf{x}} = 4x_1^2 + 2x_2^2
+\min_{\mbf{x}} f\brak{\mbf{x}} %= 4x_1^2 + 2x_2^2
  \end{align}
  with constraints
  \begin{align}
- g_1\brak{\mbf{x}} = 3x_1 + x_2-8 = 0\\
- g_2 \brak{\mbf{x}}= 15 - 2x_1 - 4x_2 \leq 0
+ g_1\brak{\mbf{x}} 
+%= 3x_1 + x_2-8 
+= 0\\
+ g_2 \brak{\mbf{x}}
+%= 15 - 2x_1 - 4x_2 
+\leq 0
  \end{align}
  
 %
@@ -1171,46 +1176,48 @@ x_2
 \end{pmatrix}
 $
 
-\solution Using the method of Lagrange multipliers,
-%
-\begin{align}
-\label{ch2_sd_kkt}
-\nabla \cbrak{f(\mbf{x})  +  \mu g(\mbf{x}) }= 0 , \quad \mu \ge 0
-\end{align}
-%
-resulting in the equations
-%
-\begin{align}
-2x_1\mu -\mu + 1 &= 0 \\
-2x_2\mu + 1 &=0 \\
-x_1^2 -x_1 + x_2^2 &= 0 
-\end{align}
-%
-which can be simplified to obtain 
-%
-\begin{align}
-\brak{\frac{1-\mu}{2\mu}}^2 + \brak{\frac{1}{2\mu}}^2 + \frac{1-\mu}{2\mu} &= 0 \\
-\Rightarrow 1 + \mu^2 -2\mu + 1 + 2\mu\brak{1-\mu} &= 0 \\
-\Rightarrow \mu^2 =2, or \mu &= \pm \sqrt{2} 
-\end{align}
-%
-From \eqref{ch2_kkt_problem},  $\mu \ge 0 \Rightarrow  \mu = \sqrt{2}$. The desired solution is
-%
-\begin{equation}
-\mbf{x} = 
-\begin{pmatrix}
- \frac{\sqrt{2}-1}{2\sqrt{2}} \\
--\frac{1}{2\sqrt{2}} 
-\end{pmatrix}
-\end{equation}
+\solution 
+%Using the method of Lagrange multipliers,
+%%
+%\begin{align}
+%\label{ch2_sd_kkt}
+%\nabla \cbrak{f(\mbf{x})  +  \mu g(\mbf{x}) }= 0 , \quad \mu \ge 0
+%\end{align}
+%%
+%resulting in the equations
+%%
+%\begin{align}
+%2x_1\mu -\mu + 1 &= 0 \\
+%2x_2\mu + 1 &=0 \\
+%x_1^2 -x_1 + x_2^2 &= 0 
+%\end{align}
+%%
+%which can be simplified to obtain 
+%%
+%\begin{align}
+%\brak{\frac{1-\mu}{2\mu}}^2 + \brak{\frac{1}{2\mu}}^2 + \frac{1-\mu}{2\mu} &= 0 \\
+%\Rightarrow 1 + \mu^2 -2\mu + 1 + 2\mu\brak{1-\mu} &= 0 \\
+%\Rightarrow \mu^2 =2, or \mu &= \pm \sqrt{2} 
+%\end{align}
+%%
+%From \eqref{ch2_kkt_problem},  $\mu \ge 0 \Rightarrow  \mu = \sqrt{2}$. The desired solution is
+%%
+%\begin{equation}
+%\mbf{x} = 
+%\begin{pmatrix}
+% \frac{\sqrt{2}-1}{2\sqrt{2}} \\
+%-\frac{1}{2\sqrt{2}} 
+%\end{pmatrix}
+%\end{equation}
 %
 \\
-{\em Graphical solution:} The constraint can be expressed as
-%
-\begin{align}
-x_1^2 - x_1 + x_2^2 &\le 0 \\
-\Rightarrow \brak{x_1 - \frac{1}{2}}^2 + x_2^2 & \le \brak{\frac{1}{2}}^2
-\end{align}
+{\em Graphical solution:} 
+%The constraint can be expressed as
+%%
+%\begin{align}
+%x_1^2 - x_1 + x_2^2 &\le 0 \\
+%\Rightarrow \brak{x_1 - \frac{1}{2}}^2 + x_2^2 & \le \brak{\frac{1}{2}}^2
+%\end{align}
 %
 %	
 \begin{lstlisting}

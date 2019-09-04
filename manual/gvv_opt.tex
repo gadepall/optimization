@@ -1432,7 +1432,7 @@ x_{11} & x_{12} \\
 x_{12} & x_{22}
 \end{pmatrix} & \succeq 0 
 \end{align}
-using {\em cvxopt}.
+using {\em cvxpy}.
 
 %\solution
 %In this problem, there is an SDP inequality and several linear inequalities.  The linear inequalities can be combined to obtain the matrix inequality
@@ -1472,7 +1472,7 @@ using {\em cvxopt}.
  %\succeq 0 
 %\end{equation}
 %%
-%For using  {\em cvxopt}, the SDP in \eqref{ch3_lin_mat_sdp_ineq} can be expressed as
+%For using  {\em cvxpy}, the SDP in \eqref{ch3_lin_mat_sdp_ineq} can be expressed as
 %%
 %\begin{equation}
  %x_{11}F_{0} + x_{12}F_1+x_{22}F_{2}\succeq B ,
@@ -1625,7 +1625,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 \end{figure}
 %
 \item
-	Now use {\em cvxopt} to obtain a solution to problem \ref{ch1_lp1}.
+	Now use {\em cvxpy} to obtain a solution to problem \ref{ch1_lp1}.
 
 \solution
 The given problem is expressed as follows
@@ -1670,15 +1670,15 @@ where
 \end{equation}
 %	
 The desired solution is then obtained using the following program.
-\begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes/4.2.py
-\end{lstlisting}
-
-
-\item
-Repeat the previous exercise using {\em cvxpy}
-
-\solution
+%\begin{lstlisting}
+%wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes/4.2.py
+%\end{lstlisting}
+%
+%
+%\item
+%Repeat the previous exercise using {\em cvxpy}
+%
+%\solution
 \begin{lstlisting}
 wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes/4.2-cvx.py
 \end{lstlisting}

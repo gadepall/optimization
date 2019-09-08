@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  8 SEP 2019 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  8 SEP 2019 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1343,24 +1343,24 @@ LaTeX Warning: Command \j invalid in math mode on input line 378.
 
 LaTeX Warning: Command \j invalid in math mode on input line 378.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 395.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 400.
 [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 400.
  (./jee_opt.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 395.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 400.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 400.
 Package rerunfilecheck Info: File `jee_opt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  24177 strings out of 492615
  477326 string characters out of 6118492
- 582898 words of memory out of 5000000
+ 584898 words of memory out of 5000000
  27653 multiletter control sequences out of 15000+600000
  57903 words of font info for 135 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  54i,14n,67p,793b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on jee_opt.dvi (2 pages, 22508 bytes).
+Output written on jee_opt.dvi (2 pages, 23108 bytes).

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  10 SEP 2019 08:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  10 SEP 2019 08:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1304,13 +1304,13 @@ File: tlc.eps Graphic file (type eps)
 LaTeX Warning: No \author given.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 310.
+LaTeX Warning: Command \j invalid in math mode on input line 312.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 313.
+LaTeX Warning: Command \j invalid in math mode on input line 315.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 313.
+LaTeX Warning: Command \j invalid in math mode on input line 315.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1320,39 +1320,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-LaTeX Warning: Command \j invalid in math mode on input line 356.
+LaTeX Warning: Command \j invalid in math mode on input line 358.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 356.
+LaTeX Warning: Command \j invalid in math mode on input line 358.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 356.
+LaTeX Warning: Command \j invalid in math mode on input line 358.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 356.
+LaTeX Warning: Command \j invalid in math mode on input line 358.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 360.
+LaTeX Warning: Command \j invalid in math mode on input line 362.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 360.
+LaTeX Warning: Command \j invalid in math mode on input line 362.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 378.
+LaTeX Warning: Command \j invalid in math mode on input line 380.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 378.
+LaTeX Warning: Command \j invalid in math mode on input line 380.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 427.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 427.
 
 (./jee_opt.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 425.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 427.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 427.
 Package rerunfilecheck Info: File `jee_opt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -1363,6 +1363,6 @@ Here is how much of TeX's memory you used:
  27653 multiletter control sequences out of 15000+600000
  57903 words of font info for 135 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 54i,14n,67p,793b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,14n,67p,793b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on jee_opt.dvi (2 pages, 26712 bytes).
+Output written on jee_opt.dvi (2 pages, 26684 bytes).

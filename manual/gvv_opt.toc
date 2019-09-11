@@ -6,3 +6,4 @@
 \contentsline {subsection}{\numberline {3.3}Karush Kuhn-Tucker Conditions}{5}{subsection.3.3}% 
 \contentsline {section}{\numberline {4}Semi-definite Programming}{6}{section.4}% 
 \contentsline {section}{\numberline {5}Linear Programming}{7}{section.5}% 
+\contentsline {section}{\numberline {6}Complex Numbers: Optimization}{8}{section.6}% 

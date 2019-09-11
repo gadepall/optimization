@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  4 SEP 2019 12:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  11 SEP 2019 06:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1334,7 +1334,7 @@ File: ./figs/2.7.eps Graphic file (type eps)
 )
 File: ./figs/2.8.eps Graphic file (type eps)
 <./figs/2.8.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3009) has occurred while \output is active []
 
  [4]
 File: ./figs/2.12_1.eps Graphic file (type eps)
@@ -1353,23 +1353,85 @@ Underfull \vbox (badness 1189) has occurred while \output is active []
  [6]
 File: ./figs/4.1.eps Graphic file (type eps)
 
-<./figs/4.1.eps> [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1700.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1700.
+<./figs/4.1.eps>
+
+LaTeX Warning: Command \j invalid in math mode on input line 1710.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1710.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+File: ./figs/2019_1_1.eps Graphic file (type eps)
+
+<./figs/2019_1_1.eps>
+
+LaTeX Warning: Command \j invalid in math mode on input line 1816.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1816.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+File: ./figs/2019_1_2.eps Graphic file (type eps)
+<./figs/2019_1_2.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1874.
+
+[9
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1874.
  (./gvv_opt.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1700.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1700.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1874.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1874.
 
 Package rerunfilecheck Info: File `gvv_opt.out' has not changed.
-(rerunfilecheck)             Checksum: 24F31EF910520B7C265086DCAB976291;494.
+(rerunfilecheck)             Checksum: E5CF1E8D2CA00594D86B73108371B4A3;558.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 24673 strings out of 492615
- 482556 string characters out of 6118492
- 803739 words of memory out of 5000000
- 28125 multiletter control sequences out of 15000+600000
+ 24686 strings out of 492615
+ 482770 string characters out of 6118492
+ 797346 words of memory out of 5000000
+ 28136 multiletter control sequences out of 15000+600000
  71906 words of font info for 179 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 54i,21n,67p,793b,1913s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,21n,67p,793b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_opt.dvi (7 pages, 83064 bytes).
+Output written on gvv_opt.dvi (9 pages, 97692 bytes).

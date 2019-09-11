@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  11 SEP 2019 06:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  11 SEP 2019 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,15 +1420,11 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1874.
 
 Package rerunfilecheck Info: File `gvv_opt.out' has not changed.
 (rerunfilecheck)             Checksum: E5CF1E8D2CA00594D86B73108371B4A3;558.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  24686 strings out of 492615
  482770 string characters out of 6118492
- 797346 words of memory out of 5000000
+ 797347 words of memory out of 5000000
  28136 multiletter control sequences out of 15000+600000
  71906 words of font info for 179 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191

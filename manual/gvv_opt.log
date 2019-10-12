@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  11 SEP 2019 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.9.28)  12 OCT 2019 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1354,80 +1354,93 @@ Underfull \vbox (badness 1189) has occurred while \output is active []
 File: ./figs/4.1.eps Graphic file (type eps)
 
 <./figs/4.1.eps>
-
-LaTeX Warning: Command \j invalid in math mode on input line 1710.
-
-
-LaTeX Warning: Command \j invalid in math mode on input line 1710.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
+
+LaTeX Warning: Command \j invalid in math mode on input line 1735.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1735.
+
 File: ./figs/2019_1_1.eps Graphic file (type eps)
-
 <./figs/2019_1_1.eps>
-
-LaTeX Warning: Command \j invalid in math mode on input line 1816.
-
-
-LaTeX Warning: Command \j invalid in math mode on input line 1816.
+Underfull \vbox (badness 7168) has occurred while \output is active []
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+
+LaTeX Warning: Command \j invalid in math mode on input line 1841.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1841.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 1830.
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
 
-File: ./figs/2019_1_2.eps Graphic file (type eps)
-<./figs/2019_1_2.eps>
+
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1855.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1874.
+File: ./figs/2019_1_2.eps Graphic file (type eps)
 
-[9
+<./figs/2019_1_2.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1874.
- (./gvv_opt.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1874.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1874.
+ [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1899.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1899.
 
-Package rerunfilecheck Info: File `gvv_opt.out' has not changed.
-(rerunfilecheck)             Checksum: E5CF1E8D2CA00594D86B73108371B4A3;558.
+(./gvv_opt.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1899.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1899.
+
+
+
+Package rerunfilecheck Warning: File `gvv_opt.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `gvv_opt.out':
+(rerunfilecheck)             Before: E5CF1E8D2CA00594D86B73108371B4A3;558
+(rerunfilecheck)             After:  84626AC9DAFC994CEE5B352A74DABCF2;608.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 24686 strings out of 492615
- 482770 string characters out of 6118492
- 797347 words of memory out of 5000000
- 28136 multiletter control sequences out of 15000+600000
+ 24686 strings out of 492624
+ 482770 string characters out of 6119216
+ 797303 words of memory out of 5000000
+ 28135 multiletter control sequences out of 15000+600000
  71906 words of font info for 179 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  54i,21n,67p,793b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_opt.dvi (9 pages, 97692 bytes).
+Output written on gvv_opt.dvi (9 pages, 99888 bytes).

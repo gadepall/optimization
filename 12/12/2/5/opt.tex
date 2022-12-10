@@ -1,0 +1,131 @@
+\documentclass[journal,10pt]{article}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{listings}
+\title{\textbf{Optimization Assignment - Linear}}
+\author{Bhavani Kanike}
+\date{October 2022}
+
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
+\begin{document}
+
+
+\maketitle
+
+
+\section*{Problem}A factory manufactures two types of screws , A and B.Each type screw requires the use of two machines , an automatic and a hand operated.It takes 4 minutes on the automatic and 6 minutes on hand operated machines to manufacture a package of screws A,while it takes 6 minutes on automatic and 3 minutes on the hand operated machines to manufacture a package of screws B. Each machine is available for at the most 4hrs on any day.The manufacturer can sell a package of screws A at a profit of Rs.7 and screws B at a profit of Rs.10 .Assuming that he can sell all the screws he manufactures,how many packages of each type should the factory owner produce in a day in order to maximise his profit? Determine the maximum profit.
+
+\section*{Solution}
+Let's assume that
+\begin{center}
+Number of Screws A be x\\
+Number of Screws B be y\\
+\end{center}
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\textbf{Item}&\textbf{Number}&\textbf{Machine A}&\textbf{Machine B}&\textbf{Profit}\\
+	\hline
+	Screw A&x&4(min)&6(min)&7\\
+	\hline
+	SCREW B&y&6(min)&3(min)&10\\
+	\hline
+	Max.Time available& &4 hrs&4 hrs&\\
+	\hline
+\end{tabular}\\
+
+According to Question : \\\\
+Automated machine works on Screw A - 4 min\\
+Automated machine works on Screw B - 6 min\\\\
+Miximum time - 4hrs = 4 x 60 = 240 min\\\\
+Therefore,
+\begin{equation}
+	\myvec{4 &6}\myvec{x\\y} \leq 240
+\end{equation}
+\begin{equation}
+	\myvec{2&3} \myvec{x\\y} \leq 120	
+\end{equation}
+\begin{equation}
+	x \geq 0 , y \geq 0
+\end{equation}
+
+Hand Operated machine works on Screw A - 6 min\\
+Hand Operated machine works on Screw B - 3 min\\\\
+Maximum time - 4 hrs = 4 x 60 = 240 min
+
+\begin{equation}
+	\myvec{6 &3}\myvec{x\\y} \leq 240
+\end{equation}
+\begin{equation}
+	\myvec{2&1}\myvec{x\\y} \leq 80
+\end{equation}
+\begin{equation}
+	x\geq 0 , y\geq 0
+\end{equation}
+\\
+As we need to maximize the profit ,\\
+the function used here is z \\
+Profit on Screw A - Rs.7\\
+Profit on Screw B - Rs.10\\
+Therefore,
+\begin{equation}
+	Maximize z = \myvec{7&10}\myvec{x\\y}
+\end{equation}
+Constraints :
+\begin{equation}
+	\myvec{2&3}\myvec{x\\y} \leq 120
+\end{equation}
+\begin{equation}
+	\myvec{2&1}\myvec{x\\y} \leq 80
+\end{equation}
+\begin{equation}
+	x \geq 0 , y\geq 0
+\end{equation}
+
+We get the maximum profit by solving the following matrix,
+\begin{equation}
+	\myvec{2&3&120\\2&1&80} \longrightarrow {R_2 - R_1} \myvec{2&3&120\\0&-2&-40} \longrightarrow{R_2*\frac{-1}{2}} \\ 
+\end{equation}
+
+\begin{equation}
+	\myvec{2&3&120\\0&1&20} \longrightarrow{R_1-3R_2} \myvec{2&0&60\\0&1&20} \longrightarrow{\frac{R_1}{2}} \myvec{1&0&30\\0&1&20}
+\end{equation}
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline
+	\textbf{Corner points}&\textbf{Value of Z}\\
+	\hline
+	(0,40)&400\\
+    \hline
+	(30,20)&410\\
+	\hline
+	(40,0)&280\\
+	\hline
+\end{tabular}\\
+\end{center}
+Hence ,Profit will be maximum if the company produces\\
+30 Packages of Screw A\\
+20 Packages of Screw B\\\\
+Maximum Profit = Rs.410
+\section*{Construction}
+\begin{figure}[h]
+\includegraphics[scale=0.5]{op1.pdf} 
+\end{figure}
+\section*{Execution}
+Verify the above proofs in the following code.\\
+\begin{lstlisting}
+https://github.com/bhavani360/FWC_assignments
+\end{lstlisting}
+ \bibliographystyle{ieeetr}
+\end{document}

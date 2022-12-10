@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{setspace}
 \usepackage{gensymb}
@@ -477,6 +478,7 @@ This manual provides a simple introduction to various concepts in optimization.
 
 
 %\chapter{The Optimum Receiver}
+\fi
 \section{Convex Functions}
 
 %\subsection{Problem}
@@ -500,7 +502,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/1.1.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/1.1.eps}
 \caption{ $\ln x$ versus $x$}.
 \label{fig.1.1}	
 \end{figure}
@@ -514,7 +516,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/1.2.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/1.2.eps}
 \caption{ $x^2$ versus $x$}.
 \label{fig.1.2}	
 \end{figure}
@@ -530,7 +532,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/1.3.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/1.3.eps}
 \caption{ Segments are below the curve}.
 \label{fig.1.3}	
 \end{figure}
@@ -660,7 +662,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.1.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.1.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$}.
 \label{fig.2.1}	
 \end{figure}
@@ -803,7 +805,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.4.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.4.eps}
 \caption{ Smallest circle in the shaded region is a point.}
 \label{fig.2.4}	
 \end{figure}
@@ -846,11 +848,11 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.7.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.7.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$.}
 \label{fig.2.7}	
 \end{figure}
-\input{./figs/tab.2.7.tex}
+\input{./manual/figs/tab.2.7.tex}
 %
 \item
 \label{ch2_prob_upper}
@@ -875,7 +877,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.8.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.8.eps}
 \caption{ Finding $ \displaystyle \min_{\mbf{x}}f\brak{\mbf{x}}$.}
 \label{fig.2.8}	
 \end{figure}
@@ -1076,7 +1078,7 @@ Note that $\mu < 0 $, contradicting the necessary condition in \eqref{ch2_kkt_ne
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.12_1.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.12_1.eps}
 \caption{ Incorrect solution is at intersection of all curves $r = 5.33$}
 \label{fig.2.12}	
 \end{figure}
@@ -1085,7 +1087,7 @@ Obtain the correct solution to the previous problem by considering $\mu = 0$.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.12_2.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.12_2.eps}
 \caption{ Optimal solution is where $g_1(x)$ touches the curve $r = 4.82$}
 \label{fig.2.13}	
 \end{figure}
@@ -1228,7 +1230,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2.15.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2.15.eps}
 \caption{ Optimal solution is the lower tangent to the circle}
 \label{fig.2.15}	
 \end{figure}
@@ -1619,7 +1621,7 @@ wget https://raw.githubusercontent.com/gadepall/optimization/master/manual/codes
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/4.1.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/4.1.eps}
 \caption{ The cost function intersects with the two constraints at $\mbf{x} = \brak{2,3}$. }
 \label{fig.4.1}	
 \end{figure}
@@ -1789,7 +1791,7 @@ $r_1$ and
 $r_2 \ge \sqrt{5}$ respectively.
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2019_1_1.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2019_1_1.eps}
 \caption{}
 \label{fig:2019_1}
 \end{figure}
@@ -1857,7 +1859,7 @@ From \eqref{eq:opt_xlam},
 Thus, the principal argument is $-\frac{\pi}{2}$.
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/2019_1_2.eps}
+\includegraphics[width=\columnwidth]{./manual/figs/2019_1_2.eps}
 \caption{}
 \label{fig:2019_1_2}
 \end{figure}
@@ -1896,5 +1898,5 @@ For $\theta = \frac{1}{2}$,
 Thus, by definition, $D$ is not a convex set.
 \end{enumerate}
 
-\end{document}
+%\end{document}
 

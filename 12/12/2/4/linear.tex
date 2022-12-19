@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,10pt,twocolumn]{article}
 \usepackage[margin=0.5in]{geometry}
 \usepackage[cmex10]{amsmath}
@@ -61,8 +62,8 @@
 	\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
 \newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
 \newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
-%\numberwithin{equation}{section}
-\numberwithin{equation}{subsection}
+%\numberwithin{align}{section}
+\numberwithin{align}{subsection}
 %\numberwithin{problem}{section}
 %\numberwithin{definition}{section}
 \let\vec\mathbf
@@ -76,22 +77,31 @@ Using basic Optimization}\\
 \maketitle
 \tableofcontents
 \section{Problem statement}
+\fi
 A manufacturer produces nuts and bolts. It takes 1 hour of work on machine A
 and 3 hours on machine B to produce a package of nuts. It takes 3 hours on
 machine A and 1 hour on machine B to produce a package of bolts. He earns a
 profit of Rs17.50 per package on nuts and Rs 7.00 per package on bolts.\\
 How many packages of each should be produced each day so as to maximise his
 profit, if he operates his machines for at the most 12 hours a day?.
+\\
+\solution
+\iffalse
 \section{Considerations}
 
 \vspace{0.2cm}
 \begin{flushleft}
-As per given data, the following table has been prepared.\\
+	\fi
+Table 
+		\ref{table:12/12/2/4}
+summarizes  the given information.
+\iffalse
 \end{flushleft}
 \vspace{0.3cm}
+\fi
 \begin{table}[htbp]
     \centering
-\setlength\extrarowheight{2pt}
+%\setlength\extrarowheight{2pt}
 \begin{tabular}{|c|c|c|c|c|c|} \hline
 &  &\textbf{Machine}&\textbf{Machine}& \\
 	\textbf{Symbol} & \textbf{Name} &\textbf{A}&\textbf{B}&\textbf{Profit}\\
@@ -102,8 +112,22 @@ As per given data, the following table has been prepared.\\
 	$\vec{t}$ & time & 12 h & 12 h & \\ \hline
 
 \end{tabular}
-\caption{\label{tab:widgets}Considerations}
+\caption{}
+		\label{table:12/12/2/4}
 \end{table}
+The optimization problem is formulated as
+\begin{align}
+	z = \myvec{17.5 & 7}\vec{x}
+	\\
+    \myvec{1 & 3 \\ 3 & 1} \vec{x} \preceq \myvec{12\\12}
+\end{align}
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/2/4/figs/optbasic.png}
+		\caption{}
+		\label{fig:12/12/2/4}
+  	\end{figure}
+	\iffalse
 
 \section{Plot to optimize machines to get maximum profit}
 \vspace{0.25cm}
@@ -124,9 +148,9 @@ Let $\vec{x}$ be the no. of nuts and $\vec{y}$ be the no. of bolts.\\
 \begin{flushleft}
 We have to maximize $\vec{x}$ and $\vec{y}$ if the factory worked at capacity of 12 hours per day. Then the values of $\vec{x}$ and $\vec{y}$ should be considered as positive, \\
 \end{flushleft}
-\begin{equation}
+\begin{align}
 x\ge 0,   y\ge 0
-\end{equation}
+\end{align}
 
 \begin{flushleft}
 As per the given data, to produce $\vec{x}$ number nuts, Machine $\vec{A}$ takes 1 hour and Machine $\vec{B}$ takes 3 hours.\\
@@ -137,37 +161,39 @@ Since we have only 12 hours of machine working time, we will use the following c
 \vspace{0.2cm}
 For Machine \textbf{A:}
 \end{flushleft}
-\begin{equation}
+\begin{align}
 x+3y \le 12
-\end{equation}
+\end{align}
 \begin{flushleft}
 For Machine \textbf{B:}
 \end{flushleft}
-\begin{equation}
+\begin{align}
 3x+y \le 12  
-\end{equation}
+\end{align}
 \begin{flushleft}
 The above equations can be expressed in vector form as,
 \end{flushleft}
 \vspace{0.15cm}
-\begin{equation}
-    \myvec{1 & 3 \\ 3 & 1} \vec{x} \preceq \myvec{12\\12}
-\end{equation}
+\fi
+\iffalse
+		The corner points are
+$\vec{A} =\myvec{0\\4}$  and $\vec{D} =\myvec{12\\0}$ \\
+$\vec{B} =\myvec{4\\0}$  and $\vec{E} =\myvec{0\\12}$ \\
 
 \begin{flushleft}
 Let z is the maximum profit, from the table1, z can be expressed as,
 \end{flushleft}
-\begin{equation}
+\begin{align}
 17.5x+7y=z
-\end{equation}
+\end{align}
 
 \begin{flushleft}
 The optimization is done by using cvxpy packages using python language, and the Maximum profit has been found equal to Rs. 73.50\\
 \vspace{0.25cm}
 By solving the above inequalities in python using cvxpy packages the value of $\vec{x}$ is :
-\begin{equation}
+\begin{align}
     \vec{x} = \myvec{3\\3}
-\end{equation}
+\end{align}
 Therefore, 3 packages of nuts and 3 packages of bolts should be produced each day to get the maximum profit Rs. 73.50
 \end{flushleft}
 
@@ -196,22 +222,33 @@ On solving the lines x+3y$\le$ 12 and 3x+y$\le$ 12, their point of intersection 
 $ \vec{C}=\myvec{3\\3}$
 \endcenter
 \begin{flushleft}
-Therefore, the corner points of the feasible region intersected by above two lines are O(0, 0), A(0, 4), B(4, 0) and C(3, 3) as shown in figure.
+	\fi
+Fig.
+		\ref{fig:12/12/2/4} represents the given constraints from which,  
+the corner points of the feasible region intersected by above two lines are 
+\begin{align}
+	\vec{0}, \vec{A} = \myvec{0\\ 4}, \vec{B}= \myvec{4 \\ 0} \text{ and }\vec{C}= \myvec{3 \\ 3} 
+\end{align}
+\iffalse
 \end{flushleft}
 \begin{flushleft}
 \subsection{Finding maximum profit from the graph with points}
 Let z is the maximum profit, the z can be expressed as,
 \end{flushleft}
-\begin{equation}
+\begin{align}
 17.5x+7y=z
-\end{equation}
+\end{align}
 \begin{flushleft}
-The values of Z at these points are as follows:\\
+	\fi
+The values of $Z$ at these points are  listed in Table
+		\ref{table:12/12/2/4/1}.
+		\iffalse
 \end{flushleft}
 \vspace{0.25cm}
 
 \setlength\extrarowheight{2pt}
-\begin{table}
+\fi
+\begin{table}[!ht]
 \begin{tabular}{|c|c|c|} \hline
 	\textbf{Corner Point} & \textbf{z=17.5x+7y} &\textbf{Remarks}\\
 	\hline
@@ -220,8 +257,14 @@ The values of Z at these points are as follows:\\
 	C=$\myvec{3\\3}$ & 73.5 & Maximum\\ \hline
 	B=$\myvec{4\\0}$ & 70 &  \\ \hline
 \end{tabular}
-\caption{\label{tab:widgets}Values of $\vec{z}$ }
+\caption{}
+		\label{table:12/12/2/4/1}
 \end{table}
+Thus, the maximum profit is 
+\begin{align}
+	z = 73.50, \vec{x} = \myvec{3\\3}.
+\end{align}
+\iffalse
 
 \begin{flushleft}
 From the table, the maximum value of z is Rs. 73.50 is found at the corner point C(3, 3).\\
@@ -250,3 +293,4 @@ https://github.com/meertabresali-FWC-IITH/project/blob \\
 
 
 \end{document}
+\fi

@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[a4paper,12pt,twocolumn]{article}
 \usepackage{graphicx}
 \usepackage[margin=0.5in]{geometry}
@@ -18,7 +19,17 @@
 \begin{document}
 \maketitle
 \section{Problem:}
-Minimize $Z$ = $3x+5y$ such that $x+3y\ge3$, $x+y\ge2$, $x\ge0$, $y\ge0$.
+\fi
+Minimize $Z$ = $3x+5y$ such that 
+\begin{align}
+x+3y&\ge3
+\\
+x+y&\ge2
+\\
+x\ge0, y&\ge0.
+\end{align}
+\solution
+\iffalse
 \maketitle
 \section{Solution:}
 %\subsection{Theory:}
@@ -29,19 +40,25 @@ We need to first graph the feasible region of the system of inequalities. The fe
 	x\ge0\\
 	y\ge0
 \end{align}
-In vector form, they are written as:
+\fi
+The given problem can be expressed as
 \begin{align}
-	&\myvec{1 & 3\\1&1}\myvec{x\\y}\ge\myvec{3\\2}\\
-	&\myvec{1&0\\0&1}\myvec{x\\y}\ge\myvec{0\\0}
+	Z = \min_{\vec{x}}\myvec{3 & 5}\vec{x}
+	\\
+	\myvec{1 & 3\\1&1}\vec{x}\succeq\myvec{3\\2}\\
+	\myvec{1&0\\0&1}\vec{x}\succeq\myvec{0\\0}
 \end{align}
+\iffalse
 %\subsection{Mathematical Calculation:}
 We need to find the intersection of given system of inequalities, to figure out the coordinates of feasible region.
 The coordinates of the quadrilateral are $\myvec{0\\2}$, $\myvec{\frac{3}{2}\\\frac{1}{2}}$, $\myvec{3\\0}$.
+\fi
 Solving using cvxpy, we get,
 \begin{align}
-	&\myvec{x\\y} = \myvec{\frac{3}{2}\\\frac{1}{2}}\\
-	&Z_{min} = 7\\
+	\vec{x} = \myvec{\frac{3}{2}\\\frac{1}{2}},
+	Z_{min} = 7
 \end{align}
+\iffalse
 Hence, the minimum of Z is verified using optimization.
  
 %\section{Construction:}
@@ -61,3 +78,4 @@ Hence, the minimum of Z is verified using optimization.
 %\end{table}
 
 \end{document}
+\fi

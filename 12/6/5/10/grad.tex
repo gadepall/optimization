@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,10pt,twocolumn]{article}
 \usepackage{graphicx, float}
 \usepackage[margin=0.5in]{geometry}
@@ -42,27 +43,41 @@
 \begin{document}
 
 \maketitle
-\paragraph{\textit{Problem Statement} - Find the maximum value of $2x^3 – 24x + 107$ in the interval [1, 3]. Find the maximum value of the same function in [–3, –1]}
-
+\paragraph{\textit{Problem Statement} -
+\fi
+Find the maximum value of $2x^3 – 24x + 107$ in the interval [1, 3]. Find the maximum value of the same function in [–3, –1].
+\\
+\solution
+\iffalse
 \section*{\large Solution}
-
-\begin{enumerate}
-\item For Maxima : \\
+\fi
     Using gradient ascent method,
 \begin{align}
-    x_n=x_{n-1}+\mu\frac{df(x)}{dx} \label{eq:9}
+    x_n=x_{n-1}+\mu\frac{df(x)}{dx} \label{eq:12/6/5/109}
     \end{align}
+    where
     \begin{align}
-    \frac{df(x)}{dx}=6x^2-24 \label{eq:10}
+    \frac{df(x)}{dx}=6x^2-24 \label{eq:12/6/5/1010}
 \end{align}
-After substituting \ref{eq:10} in \ref{eq:9} we get:
+yielding
 \begin{align}
-    x_n=x_{n-1}+\mu(6x^2-24_{n-1})\label{eq:11}
+    x_n=x_{n-1}+\mu(6x^2-24_{n-1})\label{eq:12/6/5/1011}
 \end{align}
-Taking $x_0 = 1, \mu = 0.001$ and $precision = 0.00000001$, values obtained using python are:
+Choosing
 \begin{align}
-\boxed{\text{Maxima} = 138.99999999999997 \approx 139} \\
-\boxed{\text{Maxima Point} = -1.9999999600969427 \approx -2.0}
+	x_0 &= 1, \mu = 0.001 \text{ and precision} = 0.00000001, 
+	\\
+	f_{max} &  \approx 139,
+x_{max}   \approx -2.0
+\end{align}
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/6/5/10/figs/opt_basic.png}
+		\caption{}
+		\label{fig:12/6/5/10}
+  	\end{figure}
+\iffalse
+\begin{align}
 \end{align}
 \end{enumerate}
 
@@ -70,3 +85,4 @@ Taking $x_0 = 1, \mu = 0.001$ and $precision = 0.00000001$, values obtained usin
 \centering \text{Graph of f(x) = $2x^3-24x+107$}
 
 \end{document}
+\fi

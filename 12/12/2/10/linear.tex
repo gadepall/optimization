@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage[utf8]{inputenc}
@@ -145,7 +146,19 @@ https://github.com/dukkipativijay/Fwciith2022/tree/main/Assignment%201%20-%20Ass
 \textbf{\textit{Q(29),Class 12, CBSE Papers, 2011}}\\
 \vspace{0.25cm}
 \raggedright
-\textbf{There are two types of fertilisers $F_1$ and $F_2$. $F_1$ consists of 10\% Nitrogen and 6\% Phosphoric acidand $F_2$ consists of 5\% Nitrogen and 10\% Phosphoric acid. After testing the soil conditions, a farmer finds that she needs atleast 14 kg of nitrogen and 14 kg of phosphoric acid for her crop. If $F_1$ costs Rs 6/kg and $F_2$ costs Rs 5/kg, determine how much of each type of fertiliser should be used so that nutrient requirements are met at a minimum cost. What is the minimum cost? }\\
+\textbf{
+\fi
+	There are two types of fertilisers $F_1$ and $F_2$. $F_1$ consists of 10\% Nitrogen and 6\% Phosphoric acidand $F_2$ consists of 5\% Nitrogen and 10\% Phosphoric acid. After testing the soil conditions, a farmer finds that she needs atleast 14 kg of nitrogen and 14 kg of phosphoric acid for her crop. If $F_1$ costs Rs 6/kg and $F_2$ costs Rs 5/kg, determine how much of each type of fertiliser should be used so that nutrient requirements are met at a minimum cost. What is the minimum cost? 
+	\\
+	\solution
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/2/10/figs/optfig1.png}
+		\caption{}
+		\label{fig:12/12/2/10}
+  	\end{figure}
+\iffalse
+	}\\
 \raggedright
 \section{Solution}
 \includegraphics[width=0.5\textwidth]{optfig1.png}
@@ -160,6 +173,9 @@ y = the number of Kg's of Fertiliser $F_2$\\
 \vspace{0.5cm}
 
 \centering
+\fi
+\begin{table}[!ht]
+	\centering
 \begin{tabular}{|c|c|c|}
 \hline
 \textbf{Fertiliser} & \textbf{Nitrogen} & \textbf{Phosphoric Acid} \\
@@ -171,7 +187,10 @@ $F_2$ & 5\% & 10\% \\
 Total & 14 kg & 14 kg\\
 \hline
 \end{tabular}
-\
+\caption{}
+		\label{table:12/12/2/10}
+\end{table}
+\iffalse
 \vspace{0.25cm}
 \raggedright
 \\Hence, the problem can be formulated as,\\
@@ -202,21 +221,21 @@ Let Z be the total cost of the fertiliser mixture.\\
 $ Z = \min\limits_{x,y} (6x + 5y)$\\
 \vspace{0.25cm}
 \raggedright
+\fi
+		The optimization problem can be framed from Table \ref{table:12/12/2/10} as
+		\iffalse
 The above equations can be expressed in vector form as,\\
 \centering
 \vspace{0.25cm}
-$ Z = \min\limits_{x,y} \myvec{6&5} \vec{x}$\\
-\vspace{0.25cm}
-$\myvec{2&1\\3&5}x \geq \myvec{280\\700}$\\
-\vspace{0.25cm}
-$ \vec{x} \geq 0 $\\
-\vspace{0.25cm}
-Solving the above equations using cvxpy, we get\\
-\vspace{0.25cm}
-$Z_{min} = Rs. 1000$\\
-\vspace{0.25cm}
-$\vec{x} = \myvec{100\\80} $\\
-\vspace{0.25cm}
+\fi
+\begin{align}
+	Z = \min_{\vec{x}} \myvec{6&5} \vec{x}\\
+\myvec{2&1\\3&5}\vec{x} \preceq \myvec{280\\700}\\
+ \vec{x}\succeq  \vec{0} 
+\end{align}
+yielding
+\begin{align}
+Z_{min} = Rs. 1000,
+\vec{x} = \myvec{100\\80} 
+\end{align}
 
-\end{document}
-Footer

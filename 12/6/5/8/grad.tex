@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,10pt,twocolumn]{article}
 \usepackage{graphicx, float}
 \usepackage[margin=0.5in]{geometry}
@@ -18,8 +19,18 @@
 \begin{document}
 
 \maketitle
-\paragraph{\textit{Problem Statement} -At what points in the interval (0,2$\pi$) does the function sin2x attain its maximum value .}
-
+\paragraph{\textit{Problem Statement} -
+\fi
+At what points in the interval (0,2$\pi$) does the function $\sin2x$ attain its maximum value.
+\\
+\solution
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/6/5/8/figs/a.png}
+		\caption{}
+		\label{fig:12/6/5/8}
+  	\end{figure}
+\iffalse
 \section*{\large Figure}
 
 \begin{figure}[H]
@@ -32,29 +43,28 @@
 
 	
     \subsection*{\normalsize Gradient descent}
-    
-    
+\fi    
+  Since  
     \begin{align}
-	\label{eq:vol_varx}
-	f(x) = sin2x\\
-    f'(x) = 2cos2x
+	\label{eq:12/6/5/8vol_varx}
+	    f(x) &= \sin2x,
+	    \\
+	    f'(x) &= 2\cos2x
 	\end{align}
-
-we have to attain the maximum value of sin2x in the interval [0,2$\pi$]. This can be seen in Figure f(x).Using gradient ascent method we can find its maxima in the interval [0,2$\pi$]
-\begin{equation}
-        x_{n+1} = x_n + \alpha \nabla f(x_n) \\
-\end{equation}
-\vspace{1mm}
-\begin{equation}
-\implies x_{n+1}=x_n+\alpha(2cos2x)
-\end{equation}
-
-Taking $x_0=0.5,\alpha=0.001$ and precision = 0.00000001, values obtained using python are:
-    
-
-    \begin{align}
-        \boxed{\text{Maxima} = 1.0000}\\
-        \boxed{\text{Maxima Point} = 0.7854}
+\iffalse
+we have to attain the maximum value of sin2x in the interval [0,2$\pi$]. This can be seen in Figure f(x).
+\fi
+Using gradient ascent, 
+\begin{align}
+	x_{n+1} &= x_n + \alpha \nabla f(x_n) \\
+&=x_n+\alpha(2\cos2x)
+\end{align}
+Choosing
+\begin{align}
+	x_0&=0.5,\alpha=0.001, precision = 0.00000001, 
+	\\
+	f_{max} &= 1.0000,
+ 	x_{max}= 0.7854.
     \end{align}
    
     
@@ -72,4 +82,3 @@ Taking $x_0=0.5,\alpha=0.001$ and precision = 0.00000001, values obtained using 
 
 
 
-\end{document}

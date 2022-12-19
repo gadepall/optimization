@@ -1,3 +1,4 @@
+\iffalse
 \def\mytitle{OPTIMIZATION}
 \def\myauthor{VUNNAVA SRAVANI}
 \def\contact{sravani21vunnava@gmail.com}
@@ -57,7 +58,30 @@ columns=fullflexible
 \includegraphics[scale=0.5]{fig.pdf}
 
 \section{Problem}
-Maximize $Z = x+y$ subject to $x - y \le -1,-x+y\le0 ,x,y \ge 0$
+\fi
+Maximize 
+\begin{align}
+Z = x+y 
+\end{align}
+subject to
+\begin{align}
+ x - y &\le -1
+	\\
+	-x+y&\le0 
+	\\
+	x,y &\ge 0
+\end{align}
+\solution 
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/1/10/figs/fig.pdf}
+		\caption{}
+		\label{fig:12/12/1/10}
+  	\end{figure}
+	From Fig. 
+		\ref{fig:12/12/1/10},
+		the given problem has no optimal solution.  This is verified from cvxpy by considering the following optimization problem.
+	\iffalse
 \section{Solution}
 Consider,
 \begin{tabular}{|c|c|}
@@ -73,29 +97,31 @@ Consider,
 \end{tabular}\\
 
 Objective function:
-\begin{equation}
-	\vec{z} = \max_{x}\vec{c}^T\vec{x}
-\end{equation}
 Constraints:
-\begin{equation}
+\begin{align}
 x - y\le -1
-\end{equation}
-\begin{equation}
+\end{align}
+\begin{align}
 -x + y \le 0
-\end{equation}
-\begin{equation}
+\end{align}
+\begin{align}
 -x \le 0
-\end{equation}
-\begin{equation}
+\end{align}
+\begin{align}
 -y \le 0
-\end{equation}
+\end{align}
 writing all the constraints in matrix form:
-\begin{equation}
+\begin{align}
 \vec{p^T}\vec{x} \preceq \vec{q}
-\end{equation}
-\begin{equation}
+\end{align}
+\fi
+\begin{align}
+	z = \max_{x}\myvec{1 & 1}\vec{x}
+	\\
+	s.t. \quad
 \myvec{1&-1 \\ -1&0 \\ 0&-1 \\ -1&0}x \preceq \myvec{-1 \\ 0 \\ 0 \\ 0 }
-\end{equation}
+\end{align}
+\iffalse
 By providing the objective function and constraints to cvxpy, we get the optimal solution for z
 \\
 \textbf{cvxpy code}
@@ -105,3 +131,4 @@ There is no feasible region between,\\
 Hence there is no maximum value for z.
 
 \end{document}
+\fi

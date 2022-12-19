@@ -1,4 +1,4 @@
-
+\iffalse
 \documentclass[10pt, a4paper]{article}
 \usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
 
@@ -25,8 +25,9 @@
 \date{}
 \maketitle
   \section{Problem}
+  \fi
 A merchant plans to sell two types
-of personal computers a desktop model and a portable
+of personal computers,  a desktop model and a portable
 model that will cost Rs 25000 and Rs 40000 respectively. He
 estimates that the total monthly demand of computers will
 not exceed 250 units. Determine the number of units of each
@@ -34,12 +35,18 @@ type of computers which the merchant should stock to get
 maximum profit if he does not want to invest more than Rs
 70 lakhs and if his profit on the desktop model is Rs 4500
 and on portable model is Rs 5000.
+\\
+\solution
+		Table \ref{table:12/12/2/8} summarizes the given information.
+\iffalse
 \section{Solution}
 Let's assume that
 \begin{center}
 Number of Desktops be x\\
 Number of Portable computers be y\\
-\end{center}
+\fi
+\begin{table}[!ht]
+\centering
 \begin{tabular}{|c|c|c|c|}
 	\hline
 	\textbf{Item}&\textbf{Number}&\textbf{Cost}&\textbf{Profit}\\
@@ -50,7 +57,17 @@ Number of Portable computers be y\\
 	\hline
 	Max Investment& &7000000&\\
 	\hline
-\end{tabular}\\
+\end{tabular}
+\caption{}
+		\label{table:12/12/2/8}
+\end{table}
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/2/8/figs/opti_1.pdf}
+		\caption{}
+		\label{fig:12/12/2/8}
+  	\end{figure}
+	\iffalse
 According to question:\\
 Monthly demand of both items=Maximum 250 units\\
 \begin{align}
@@ -75,14 +92,15 @@ Hence,function used here will be maximize Z\\
 	$\therefore$ maximize Z=$\myvec{4500&5000}\myvec{x\\y}$\\ 
 \end{center}
 combining all constraints
-\begin{center}
-	Maximize Z=$\myvec{4500&5000}\myvec{x\\y}$\\
-	subject to constraints\\
-\end{center}
+\fi
+The optimization problem can then be summarized as
 \begin{align}
- \myvec{1&1\\5&8}\myvec{x\\y} \le \myvec{250\\1400} \\
- x \geq 0,y \geq 0
+Z=\myvec{4500&5000}\vec{x}
+\\
+ s.t. \quad \myvec{1&1\\5&8}\vec{x} \preceq \myvec{250\\1400} \\
+ \vec{x} \succeq \vec{0}
 \end{align}
+\iffalse
 \begin{align}
  \myvec{1&1}\myvec{x\\y} \le 250 
 \end{align}
@@ -107,7 +125,16 @@ combining all constraints
 	\hline
 \end{tabular}\\
 \end{center}
-\begin{center}
+\fi
+From Fig. 
+		\ref{fig:12/12/2/8}, the corner points are listed in Table 
+		\ref{table:12/12/2/8/1}
+		yielding  the solution 
+\begin{align}
+	Z = 1150000, \vec{x} = \myvec{200 \\50}
+\end{align}
+\begin{table}[!ht]
+	\centering
 \begin{tabular}{|c|c|}
 	\hline
 	\textbf{Corner points}&\textbf{Value of Z}\\
@@ -118,8 +145,11 @@ combining all constraints
 	\hline
 	(0,175)&875000\\
 	\hline
-\end{tabular}\\
-\end{center}
+\end{tabular}
+		\caption{}
+		\label{table:12/12/2/8/1}
+\end{table}
+\iffalse
 \begin{center}
 Hence,the profit will be maximum if company produces\\
 	Number of Desktops is 200\\
@@ -137,3 +167,4 @@ https://github.com/soundaryanaru/FWC-assignments/blob/main/Optimization/Basic/co
 \end{lstlisting}
  \bibliographystyle{ieeetr}
 \end{document}
+\fi

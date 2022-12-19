@@ -1,3 +1,4 @@
+\iffalse
 \documentclass{article}
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
@@ -34,10 +35,15 @@
 \begin{multicols}{2}
 
 \paragraph{\begin{flushleft}\textbf{Problem: }
-\textbf{A dietician wishes to mix together two kinds of food X and Y in such away that the mixture contains atleast 10 units of vitamin A ,12 units of vitamin B and 8 units of vitamin C .The vitamin contents of one kg food is given below:}
+	\fi
+A dietician wishes to mix together two kinds of food X and Y in such away that the mixture contains atleast 10 units of vitamin A ,12 units of vitamin B and 8 units of vitamin C .The vitamin contents of one kg food is given below
+\iffalse
 \end{flushleft}}
 \resizebox{6.5cm}{!}
 {
+	\fi
+	\begin{table}[!ht]
+		\centering
 \begin{tabular}{|c|c|c|c|}
 	\hline
 	\textbf{Food}&\textbf{Vitamin A}&\textbf{Vitamin B}&\textbf{Vitamin C}\\
@@ -46,10 +52,21 @@
 	\hline
 	\textbf{Y}&2&2&1\\
 	\hline
-\end{tabular}}
-\begin{flushleft}
-\textbf{One kg of food X costs Rs 16 and one kg of food Y costs Rs 20. Find the least
-cost of the mixture which will produce the required diet?}
+\end{tabular}
+		\caption{}
+		\label{fig:12/12/3/3}
+\end{table}
+One kg of food X costs Rs 16 and one kg of food Y costs Rs 20. Find the least
+cost of the mixture which will produce the required diet.
+\\
+\solution
+	\iffalse
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/3/3/figs/opt_fig1.pdf}
+		\caption{}
+		\label{fig:12/12/3/3}
+  	\end{figure}
 \end{flushleft}
 \includegraphics[scale=0.5]{opt_fig1.pdf} 
 \section*{Solution}
@@ -92,3 +109,4 @@ $P_{min}$=120\\
 $\vec{x}$=$\myvec{2\\4}$
 \end{multicols}{2}
 \end{document}
+\fi

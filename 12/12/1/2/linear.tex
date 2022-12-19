@@ -1,3 +1,4 @@
+\iffalse
 \documentclass{article}
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
@@ -34,20 +35,34 @@
 \begin{multicols}{2}
 
 \paragraph{\begin{flushleft}\textbf{Problem: }
-\textbf{Minimise}
-\begin{align*}
+	\fi
+Minimise
+	\begin{align}
 Z = -3x+4y 
-\end{align*}
-subjected to
-\begin{align*}
-x+2y \preceq 8, 3x+2y \preceq 12, x \succeq 0 , y \succeq 0
-\end{align*}
+\end{align}
+such that 
+\begin{align}
+	x+2y &< 8,\\
+	3x+2y &< 12,\\
+	x > 0, y &>  0
+\end{align}
+\\
+\solution
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/1/2/figs/fig.pdf}
+		\caption{}
+		\label{fig:12/12/1/2}
+  	\end{figure}
+	\iffalse
 \includegraphics[scale=0.5]{fig.pdf} 
 \end{flushleft}}
 \section*{Solution}
 \begin{flushleft}
-Problem can be formulated as,\\
-\end{flushleft}
+	\fi
+	The given
+problem can be formulated as
+\iffalse
 \begin{align}
 \min_{\vec{x}} Z=(-3x+4y)
 \end{align}
@@ -61,20 +76,17 @@ x+2y \preceq8
 x\succeq0,y\succeq0
 \end{align}
 eq 2 and 3 to 4 can be expressed in vector form as
-\begin{align*}
-\min_{\vec{x}}\vec{Z}=\myvec{-3 \hspace{0.2cm}4}\vec{x}\\
-\myvec{1 \hspace{0.2cm} 2\\
-       3 \hspace{0.2cm} 2\\
-       1 \hspace{0.2cm}0\\
-       0 \hspace{0.2cm} 1}\vec{x}\succeq \myvec{8 \\12\\0\\0}
-\end{align*}
-Solving above equations using cvxpy, we get\\
-\vspace{0.1cm}\\
+\fi
 \begin{align}
-\min_{\vec{x}} Z=-12
+	\min_{\vec{x}}Z=\myvec{-3 & 4}\vec{x}\\
+\myvec{1 & 2\\
+       3 & 2\\
+       1 &0\\
+       0 & 1}\vec{x}\succeq \myvec{8 \\12\\0\\0}
 \end{align}
+Solving above equations using cvxpy, we get
 \begin{align}
-\vec{x}=\myvec{4\\0}
+	\min_{\vec{x}} Z&=-12
+	\\
+	\vec{x}&=\myvec{4\\0}
 \end{align}
-\end{multicols}{2}
-\end{document}

@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,10pt,twocolumn]{article}
 \usepackage{graphicx}
 \usepackage[margin=0.5in]{geometry}
@@ -9,7 +10,7 @@
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
 \usepackage{enumerate}
 \let\vec\mathbf
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\myvec}[1]{\ensuremath{\myvec{#1}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
 \lstset{
@@ -23,10 +24,13 @@ columns=fullflexible
 \begin{document}
 \maketitle
 \raggedright \textbf{Problem Statement}: \vspace{3mm} \\
+\fi
 Two godowns A and B have grain capacity of 100 quintals and 50 quintals
 respectively. They supply to 3 ration shops, D, E and F whose requirements are
 60, 50 and 40 quintals respectively. The cost of transportation per quintal from
-the godowns to the shops are given in the following table: \vspace{5mm} \\
+the godowns to the shops are given in the following table
+\begin{table}[!ht]
+	\centering
 \begin{tabular}{|c|c|c|}
 \hline
 % \begin{tabularx}{\linewidth} {lX}
@@ -38,11 +42,13 @@ the godowns to the shops are given in the following table: \vspace{5mm} \\
  \hline
   F & 2.5 & 3 \\
  \hline
-\end{tabular} \\
+\end{tabular} 
+\end{table} 
 \vspace{5mm}
 How should the supplies be transported in order that the transportation cost is minimum? What is the minimum cost?
-\section*{Solution}
-Let's assume that \\
+\\
+\solution
+Let's assume that 
 \begin{enumerate}
 \item A supplies $x$ quintals grain to ration shop D.
 \item A supplies $y$ quintals grain to ration shop E.
@@ -53,9 +59,9 @@ Let's assume that \\
 \end{enumerate}
 Total transportation cost is given by :
 \begin{align}
-P=2.5*x+1.5*y+410
+P=2.5x+1.5y+410
 \end{align}
-Now, Since godown A can supply maximum 60 quintals to ration shop D and 50 quintals to ration shop E and have maximum 100 quintals capacity to supply.\vspace{2mm} \\ Also, if godown A supplies all 40 quintals to ration shop F, then remaining 60 quintals will be supplied to ration shop D and E and $x$ and $y$ is amount of grains. It can never be negative.
+Now, Since godown A can supply maximum 60 quintals to ration shop D and 50 quintals to ration shop E and have maximum 100 quintals capacity to supply.\vspace{2mm} \\ Also, if godown A supplies all 40 quintals to ration shop F, then remaining 60 quintals will be supplied to ration shop D and E and $x$ and $y$ is amount of grains. It can never be negative.  This leads to the following conditions
 \begin{align}
 x+y \le 100 \\
 x \le 60 \\
@@ -64,33 +70,34 @@ y \le 50 \\
 x \ge 0 \\
 y \ge 0
 \end{align}
+\iffalse
 The above equations in vector form is :
 \begin{align}
 \vec{A_1} = 
-\begin{pmatrix}
+\myvec{
 1 \\
 1 \\
-\end{pmatrix} \\
+} \\
 \vec{A_2} = 
-\begin{pmatrix}
+\myvec{
 1 \\
 1 \\
-\end{pmatrix} \\
+} \\
 \vec{A_3} = 
-\begin{pmatrix}
+\myvec{
 1 \\
 0 \\
-\end{pmatrix} \\
+} \\
 \vec{A_4} = 
-\begin{pmatrix}
+\myvec{
 0 \\
 1 \\
-\end{pmatrix} \\
+} \\
 \vec{x} = 
-\begin{pmatrix}
+\myvec{
 x \\
 y \\
-\end{pmatrix}
+}
 \end{align}
 \begin{align}
 \vec{A_1}\vec{x} \le 100
@@ -105,18 +112,22 @@ y \\
 \vec{A_4}\vec{x} \le 50
 \end{align}
 which can be expressed in vector form as
+\fi
+The optimization problem can then be expressed as
 \begin{align}
+	P=\max_{\vec{x}}\myvec{2.5 & 1.5}\vec{x}+410
+	\\
+	s.t. \quad
  \myvec{1 &1 \\ -1 & -1 \\ -1 & 0 \\ 0 & -1 \\} \vec{x}\preceq \myvec{100 \\ -60 \\ -60 \\ -50}
 \end{align}
-The optimization is done by using cvxpy packges in python language: \\
-The minimum value of P is  : 510 \\
-By solving the above inequalities in python using cvxpy packages the value of $\vec{x}$ is :
+yielding
 \begin{align}
+	P = 510, 
 \vec{x} = 
-\begin{pmatrix}
+\myvec{
 10 \\
 50 \\
-\end{pmatrix}
+}
 \end{align}
 Hence,
 \begin{enumerate}
@@ -128,4 +139,3 @@ Hence,
 \item A supplies 0 quintals grain to ration shop E.
 \item A supplies 0 quintals grain to ration shop F.
 \end{enumerate}
-\end{document}

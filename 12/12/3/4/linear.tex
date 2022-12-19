@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage[utf8]{inputenc}
@@ -144,11 +145,11 @@ https://github.com/SurabhiSeetha/Fwciith2022/tree/main/avr%20gcc
 \end{lstlisting}
 %
 \section{Question-Class 12, Miscellaneous, Q(4)}
-\raggedright{A manufacturer makes two types of toys A and B.Three machines are needed for this purpose and the time(in minutes)required for each toy on the machines is given below:}\\
-\centering
-\vspace{0.25cm}
+\fi
+A manufacturer makes two types of toys A and B.Three machines are needed for this purpose and the time(in minutes)required for each toy on the machines is given below
+\begin{table}[!ht]
+	\centering
 \begin{tabular}{|c|c|c|c|}
-
 \hline
 \textbf{Types of Toys} & \textbf{I} & \textbf{II} & \textbf{III}\\
 \hline
@@ -156,11 +157,20 @@ A & 12 & 18 & 6\\
 \hline
 B & 6 & 0 & 9\\
 \hline
-
 \end{tabular}
+\end{table}
 \vspace{0.4cm}\\
 \raggedright
-Each machine is available for a maximum 6 hours per day. If the profit on each toy of type A is Rs.7.50 and that on eahc toy of type B is Rs.5, show that 15 toys of type A and 30 type B should be manufactured in a day to get maximum profit
+Each machine is available for a maximum 6 hours per day. If the profit on each toy of type A is Rs.7.50 and that on each toy of type B is Rs.5, show that 15 toys of type A and 30 type B should be manufactured in a day to get maximum profit.
+\\
+\solution
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/3/4/figs/optlinear1.png}
+		\caption{}
+		\label{fig:12/12/3/4}
+  	\end{figure}
+	\iffalse
 \section{Solution}
 \includegraphics[width=0.5\textwidth]{optlinear1.png}\\
 From the figure we get, four points A(0,40), B(15,30),C(20,20),D(20,0)\\
@@ -184,20 +194,16 @@ x and y are the profits of A and B\\
 \vspace{0.25cm}
 $Z_{max}=7.50x+5y$\\
 \raggedright
-The above equations can be expressed in vector form as,\\
-\centering
-\vspace{0.25cm}
-$ Z = \max\limits_{x,y} \myvec{7.50&5} \vec{x}$\\
-\vspace{0.25cm}
-$\myvec{2&1\\3&0\\2&3}x \leq \myvec{1\\1\\2}$\\
-\vspace{0.25cm}
-$ \vec{x} \geq 0 $\\
-\vspace{0.25cm}
-Solving the above equations using cvxpy, we get\\
-\vspace{0.25cm}
-$Z_{max} = Rs. 262.50$\\
-\vspace{0.25cm}
-$\vec{x} = \myvec{15\\30} $\\
-\vspace{0.25cm}
+\fi
+The given information can be framed as the optimization problem 
+\begin{align}
+ Z = \max_{\vec{x}} \myvec{7.50&5} \vec{x}\\
+\myvec{2&1\\3&0\\2&3}\vec{x} \preceq \myvec{1\\1\\2}\\
+ \vec{x} \succeq  \vec{0}
+\end{align}
+Solving the above equations using cvxpy, we obtain 
+\begin{align}
+Z_{max} = Rs. 262.50,
+\vec{x} = \myvec{15\\30} 
+\end{align}
 
-\end{document}

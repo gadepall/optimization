@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[journal,10pt,twocolumn]{article}
 \usepackage{graphicx, float}
 \usepackage[margin=0.5in]{geometry}
@@ -17,11 +18,20 @@
 \begin{document}
 
 \maketitle
-\paragraph{\textit{\large Problem Statement} -Find both the maximum value and the minimum value of }
-
-\begin{eqnarray*}
+\paragraph{\textit{\large Problem Statement} -
+\fi
+Find both the maximum value and the minimum value of 
+\begin{align}
     f(x) &= 3x^4-8x^3+12x^2-48x+25=0 &  x \in (0,3)
-\end{eqnarray*}
+\end{align}
+\solution
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/6/5/7/figs/opt2.pdf}
+		\caption{}
+		\label{fig:12/6/5/7}
+  	\end{figure}
+	\iffalse
 \section*{\large Figure:}
 \begin{figure}[H]
 \centering
@@ -34,25 +44,20 @@
 \section*{Solution:}
 
 Given:
-\begin{eqnarray*}
+\begin{align}
     f(x) &= 3x^4-8x^3+12x^2-48x+25=0 &  x \in (0,3)
-\end{eqnarray*}
-
-\begin{eqnarray}
+\end{align}
+\fi
+\begin{align}
     \frac{df(x)}{dx} &= 12x^3-24x^2+24x-48
-\end{eqnarray}
-\\
-\textbf{For minima :}
-\\
-By using Gradient descent method :
-\begin{eqnarray}
+\end{align}
+		The minimum can be found using
+\begin{align}
         x_{n+1} &= x_n - \alpha \frac{df(x)}{dx}
-\end{eqnarray}
-\begin{eqnarray}
-         x_{n+1} &= x_n - \alpha (12x_n^3-24x_n^2+24x_n-48)
-\end{eqnarray}
-
-where \\
+	\\
+          &= x_n - \alpha (12x_n^3-24x_n^2+24x_n-48)
+\end{align}
+where 
 \begin{enumerate}
 \item $\alpha$ = 0.001
 \item $x_{n+1}$ is current value
@@ -60,16 +65,14 @@ where \\
 \item precession = 0.00000001
 \item maximum iterations = 100000000
 \end{enumerate}
-
-The minimum values obtained from the python code \vspace{5mm}\\
-The given function has minimum value at
+as
 \begin{align}
-        \boxed{\text{Minima} = -39}\\
-        \boxed{\text{Minima Point} = 2}
+ 	f_{min}= -39\\
+ 	x_{min}= 2
     \end{align}
-\\
-\textbf{For maxima :}
-\\
+    \iffalse
+    \item
+For maximum, the 
  Critical point is given by
     \begin{align}
        \frac{df(x)}{dx} &= 0 \\
@@ -96,3 +99,4 @@ The given function has minimum value at
     \end{align}
    
 \end{document}
+\fi

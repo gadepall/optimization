@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[10pt,a4paper]{report}
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
@@ -35,11 +36,14 @@
 
 \centering \Large \textbf{OPTIMIZATION ASSIGNMENT} \normalsize \vspace{10mm}
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 
 \section{Problem:}  
+\fi
 Find the maximum area of an isosceles triangle inscribed in the ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ with its vertex at one end of the major axis.
-
+\\
+\solution
+\iffalse
 \section{Solution: }
 
 \raggedright \textbf{Input Parameters :}\\ \vspace{2mm}
@@ -176,9 +180,9 @@ The below link realises the code of the above construction.\\
 \fbox{\parbox{8.5cm}{\url{https://github.com/19pa1a04e9/FWC-IITH/tree/main/Assignment-1/OPTIMIZATION/codes/optimization.py}}}
 \end{center}
 
-
 \section{Termux Commands :}
 \centering bash rncom.sh ..... Using Shell commands.
 
-\end{multicols}
+%\end{multicols}
 \end{document}
+\fi

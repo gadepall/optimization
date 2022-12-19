@@ -1,3 +1,4 @@
+\iffalse
 \documentclass[10pt,twocolumn]{article}
 \usepackage{graphicx}
 \usepackage[margin=0.5in]{geometry}
@@ -23,7 +24,12 @@
 \begin{document}
 
 \maketitle
-\paragraph{\textit{Problem Statement} - An aeroplane can carry a maximum of 200 passengers.A profit of Rs.1000 is made on each executive class ticket and a profit of Rs.600 is made on each economy class ticket. The airline reserves at least 20 seats for executive class. However, at least 4 times as many passengers prefer to travel by economy class than by the executive class. Determine how many tickets of each type must be sold in order to maximise the profit for the airline. What is the maximum profit?} 
+\paragraph{\textit{Problem Statement} -
+\fi
+An aeroplane can carry a maximum of 200 passengers.A profit of Rs.1000 is made on each executive class ticket and a profit of Rs.600 is made on each economy class ticket. The airline reserves at least 20 seats for executive class. However, at least 4 times as many passengers prefer to travel by economy class than by the executive class. Determine how many tickets of each type must be sold in order to maximise the profit for the airline. What is the maximum profit? 
+\\
+\solution
+\iffalse
 \section{Solution}
 Let Number of Executive class ticket sold be x
 \vspace{0.3cm}\\
@@ -92,19 +98,26 @@ which can be expressed in vector form as
 \begin{align}
  \myvec{-1 &-1 \\ 1 & 0 \\ -4 & 1 \\} \vec{x}\ge \myvec{200 \\ 20 \\ 0}
 \end{align}
-Let P be the maximum number of tickets of each type must be sold in order to maximise the profit for the airline . The problem can be formulated as
-\end{flushleft}
+\fi
+Let $P$ be the maximum number of tickets of each type must be sold in order to maximise the profit for the airline . The problem can be formulated as
 \begin{align}
-	P = \max_{x,y}(x+y)
+	P = \max_{\vec{x}}\myvec{1 & 1}\vec{x}
+	\\
+	s.t. \quad
+ \myvec{-1 &-1 \\ 1 & 0 \\ -4 & 1 \\} \vec{x}\succeq \myvec{200 \\ 20 \\ 0}
 \end{align}
-The optimization is done by using cvxpy packges in python language:
+yielding
 \begin{align}
-	P_{max} = 136000 \\
+	P_{max} = 136000, 
 	\vec{x} = \myvec{40 \\ 160}
 \end{align}
-
-\section{Graph}
-
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/3/5/figs/opt.png}
+		\caption{}
+		\label{fig:12/12/3/5}
+  	\end{figure}
+\iffalse
 \begin{figure}[h]
 \includegraphics[scale=0.3]{opt.png}
 \caption{Graph}
@@ -112,6 +125,7 @@ The optimization is done by using cvxpy packges in python language:
 \end{figure}
 
 \end{document}
+\fi
 
 
 

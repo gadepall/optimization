@@ -1,3 +1,4 @@
+\iffalse
 \documentclass{article}
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
@@ -34,23 +35,36 @@
 \begin{multicols}{2}
 
 \paragraph{\begin{flushleft}\textbf{Problem: }
-\textbf{Minimise and Maximise}
-\begin{align*}
+\fi
+Minimise and Maximise
+\begin{align}
 Z = 5x+10y
-\end{align*}
-subjected to
-\begin{align*}
-x+2y \preceq 120, x+y \succeq 60, x-2y \succeq 0, x \succeq 0 , y \succeq 0
-\end{align*}
+\end{align}
+subject to
+\begin{align}
+	x+2y &\le 120
+	\\
+	x+y &\ge 60
+	\\
+	x-2y &\ge 0
+	\\
+	x \ge 0 , y &\ge 0
+\end{align}
+\solution
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{12/12/1/7/figs/opt1.pdf}
+		\caption{}
+		\label{fig:12/12/1/7}
+  	\end{figure}
+	\iffalse
 \includegraphics[scale=0.5]{/sdcard/Download/Opti/figure2/opt1.pdf} 
 \end{flushleft}}
 \section*{Solution}
 \begin{flushleft}
-Problem can be formulated as,\\
-\end{flushleft}
 \begin{align}
 \min_{\vec{x}} Z=(5x+10y)\\
-\max_{\vec{x}} Z=(5x+10y)
+\max_{\vec{x}} Z=(5x+10y) \\
 \end{align}
 \begin{align*}
 x+2y \preceq 120
@@ -65,33 +79,34 @@ x-2y \succeq 60
 x \succeq 0 , y \succeq 0
 \end{align*}
 all the above expressions can be expressed in vector form as
-\begin{align*}
-\min_{\vec{x}}\vec{Z}=\myvec{5 \hspace{0.2cm}10}\vec{x}\\
-\max_{\vec{x}}\vec{Z}=\myvec{5 \hspace{0.2cm}10}\vec{x}\\
-\myvec{1 \hspace{0.2cm}1\\
-       1 \hspace{0.2cm}-2\\
-       1 \hspace{0.2cm}0\\
-       0 \hspace{0.2cm}1}\vec{x}\succeq \myvec{60 \\0\\0\\0}\\   
- \myvec{1 \hspace{0.2cm}2}\vec{x}\preceq \myvec{120}  
-\end{align*}
+\fi
+	The given 
+problem can be formulated as
+\begin{align}
+	\min_{\vec{x}}\vec{Z}=\myvec{5 & 10}\vec{x}\\
+	\max_{\vec{x}}\vec{Z}=\myvec{5 &10}\vec{x}\\
+	s.t. \quad
+	\myvec{
+	-1 & -2 \\
+		1 &1\\
+	1 & -2\\
+	1 &0\\
+	0 &1
+	}\vec{x}\succeq \myvec{-120 \\ 60 \\0\\0\\0}\\   
+\end{align}
 %\begin{align}
 %\max_{\vec{x}}\vec{Z}=\myvec{5 \hspace{0.2cm}10}\vec{x}\\
 %\myvec{1 \hspace{0.2cm}2\vec{x}\preceq \myvec{120}
 %\end{align}
-Solving above equations using cvxpy, we get\\
-\vspace{0.1cm}\\
+Solving above equations using cvxpy,
 \begin{align}
-\min_{\vec{x}} Z=300
-\end{align}
-\begin{align}
+\min_{\vec{x}} Z=300,
 \vec{x}=\myvec{60\\0}
-\end{align}
-\vspace{0.1cm}\\
-\begin{align}
-\max_{\vec{x}} Z=600
-\end{align}
-\begin{align}
+\\
+\max_{\vec{x}} Z=600,
 \vec{x}=\myvec{60\\30}
 \end{align}
+\iffalse
 \end{multicols}{2}
 \end{document}
+\fi

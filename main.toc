@@ -8,15 +8,15 @@
 \contentsline {section}{\numberline {4.2}Applications}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Miscellenaeous}{39}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Quadratic Programming}{49}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Geometric Programming}{51}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Manual}{53}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Convex Functions}{53}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Gradient Descent Method}{56}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Convex Optimization}{58}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Lagrange Multipliers}{58}{subsection.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Inequality Constraints}{60}{subsection.A.3.2}%
-\contentsline {subsection}{\numberline {A.3.3}Karush Kuhn-Tucker Conditions}{66}{subsection.A.3.3}%
-\contentsline {section}{\numberline {A.4}Semi-definite Programming}{70}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Linear Programming}{74}{section.A.5}%
-\contentsline {section}{\numberline {A.6}Convex Polygon}{76}{section.A.6}%
-\contentsline {section}{\numberline {A.7}Complex Numbers: Optimization}{77}{section.A.7}%
+\contentsline {chapter}{\numberline {6}Semi-Definite Programming}{51}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Manual}{57}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Convex Functions}{57}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Gradient Descent Method}{60}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Convex Optimization}{62}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Lagrange Multipliers}{62}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Inequality Constraints}{64}{subsection.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}Karush Kuhn-Tucker Conditions}{70}{subsection.A.3.3}%
+\contentsline {section}{\numberline {A.4}Semi-definite Programming}{74}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Linear Programming}{78}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Convex Polygon}{80}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Complex Numbers: Optimization}{81}{section.A.7}%

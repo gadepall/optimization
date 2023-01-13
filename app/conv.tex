@@ -1,0 +1,52 @@
+\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item
+	\label{prop:app/convconvconvex_def}
+A single variable function $f$ is said to be convex if
+\begin{align}
+	\label{eq:app/convconvconvex_def}
+	f\sbrak{\lambda x_1 + \brak{1-\lambda}x_2} \leq \lambda f\brak{x_1} + \brak{1-\lambda}f\brak{x_2},
+\end{align}
+for $\quad 0 < \lambda < 1$ and $x_1, x_2 \in \mathbb{R}$.
+
+For a generic quadratic function $ax^2+bc+c$, let us determine the sufficient condition for it to be convex. Let 
+\begin{align}
+	\label{eq:app/convconvEq1}
+	f\brak{x} &= ax^2+bx+c 
+\end{align}
+Substituting LHS of inequality from \eqref{eq:app/convconvconvex_def} in \eqref{eq:app/convconvEq1}
+\begin{multline}
+   \label{eq:app/convconvEq2}
+	f\sbrak{\lambda x_1 + \brak{1-\lambda}x_2}  = f\sbrak{x_2 + \lambda \brak{x_1-x_2}}\\ 
+	   \implies  a\sbrak{x_2+\lambda\brak{x_1-x_2}}^2 b\sbrak{x_2+\lambda\brak{x_1-x_2}} + c \\ 
+	   \implies ax_2^2 + a\lambda^2 x_1^2+a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 \\ 
+	   +2a\lambda x_1x_2 - 2a\lambda x_2^2+bx_2+b\lambda x_1-b\lambda x_2+c 
+\end{multline} 
+Substituting RHS of inequality from \eqref{eq:app/convconvconvex_def} in \eqref{eq:app/convconvEq1}
+\begin{multline}
+	\lambda f\brak{x_1} + \brak{1-\lambda}f\brak{x_2}  = a \lambda x_1^2 + b\lambda x_1 + \lambda c \\ 
+		 + \brak{1-\lambda}\brak{ax_2^2+bx_2+c} \\
+	\label{eq:app/convconvEq3}
+		\implies  a \lambda x_1^2 + b\lambda x_1 + ax_2^2 + bx_2 + c -a\lambda x_2^2 -b\lambda x_2
+\end{multline} 
+Combining \eqref{eq:app/convconvEq2} and \eqref{eq:app/convconvEq3} with inequality and simplifying
+\begin{multline}
+a\lambda^2 x_1^2 + a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 +2a\lambda x_1x_2 - 2a\lambda x_2^2 \leq \\
+	a\lambda x_1^2  -a\lambda x_2^2  
+\end{multline} 
+\begin{multline}
+	\label{eq:app/convconvEq4}
+	\implies a\lambda^2 x_1^2 + a\lambda^2 x_2^2 - 2a\lambda^2 x_1x_2 +2a\lambda x_1x_2 - a\lambda x_2^2 - a\lambda x_1^2 \leq 0 \\ 
+	\implies   x_1^2\brak{a\lambda^2-a\lambda} + x_2^2\brak{a\lambda^2 - a\lambda} - 2x_1x_2\brak{a\lambda^2-a\lambda} \leq 0 \\ 
+	 \implies  \brak{a \lambda^2-a\lambda}\brak{x_1-x_2}^2 \leq 0\\
+	 \implies  a\lambda\brak{1-\lambda}\brak{x_1-x_2}^2 \geq 0
+\end{multline}
+For the inequality in \eqref{eq:app/convconvEq4} to be true,
+\begin{align}
+	a \geq 0 \because \lambda, 1-\lambda \geq 0, \brak{x_1-x_2}^2 \geq 0
+\end{align}
+However, $a \neq 0$, since it is a quadratic function. Hence $a > 0$, for $f\brak{x}$ to be convex.
+\end{enumerate}
+

@@ -8,14 +8,15 @@
 \BOOKMARK [1][-]{section.4.3}{Miscellenaeous}{chapter.4}% 8
 \BOOKMARK [0][-]{chapter.5}{Quadratic Programming}{}% 9
 \BOOKMARK [0][-]{chapter.6}{Semi-Definite Programming}{}% 10
-\BOOKMARK [0][-]{appendix.A}{Manual}{}% 11
-\BOOKMARK [1][-]{section.A.1}{Convex Functions}{appendix.A}% 12
-\BOOKMARK [1][-]{section.A.2}{Gradient Descent Method}{appendix.A}% 13
-\BOOKMARK [1][-]{section.A.3}{Convex Optimization}{appendix.A}% 14
-\BOOKMARK [2][-]{subsection.A.3.1}{Lagrange Multipliers}{section.A.3}% 15
-\BOOKMARK [2][-]{subsection.A.3.2}{Inequality Constraints}{section.A.3}% 16
-\BOOKMARK [2][-]{subsection.A.3.3}{Karush Kuhn-Tucker Conditions}{section.A.3}% 17
-\BOOKMARK [1][-]{section.A.4}{Semi-definite Programming}{appendix.A}% 18
-\BOOKMARK [1][-]{section.A.5}{Linear Programming}{appendix.A}% 19
-\BOOKMARK [1][-]{section.A.6}{Convex Polygon}{appendix.A}% 20
-\BOOKMARK [1][-]{section.A.7}{Complex Numbers: Optimization}{appendix.A}% 21
+\BOOKMARK [0][-]{appendix.A}{Convex Functions}{}% 11
+\BOOKMARK [0][-]{appendix.B}{Manual}{}% 12
+\BOOKMARK [1][-]{section.B.1}{Convex Functions}{appendix.B}% 13
+\BOOKMARK [1][-]{section.B.2}{Gradient Descent Method}{appendix.B}% 14
+\BOOKMARK [1][-]{section.B.3}{Convex Optimization}{appendix.B}% 15
+\BOOKMARK [2][-]{subsection.B.3.1}{Lagrange Multipliers}{section.B.3}% 16
+\BOOKMARK [2][-]{subsection.B.3.2}{Inequality Constraints}{section.B.3}% 17
+\BOOKMARK [2][-]{subsection.B.3.3}{Karush Kuhn-Tucker Conditions}{section.B.3}% 18
+\BOOKMARK [1][-]{section.B.4}{Semi-definite Programming}{appendix.B}% 19
+\BOOKMARK [1][-]{section.B.5}{Linear Programming}{appendix.B}% 20
+\BOOKMARK [1][-]{section.B.6}{Convex Polygon}{appendix.B}% 21
+\BOOKMARK [1][-]{section.B.7}{Complex Numbers: Optimization}{appendix.B}% 22

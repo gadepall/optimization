@@ -1,23 +1,24 @@
 \vskip -8pt
 \contentsline {schapter}{Introduction}{iii}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Convex Functons}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Gradient Descent}{13}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Geometric Programming}{25}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Linear Programming}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Applications}{37}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Miscellenaeous}{49}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Quadratic Programming}{59}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Semi-Definite Programming}{61}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Convex Functions}{67}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Manual}{69}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Convex Functions}{69}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Gradient Descent Method}{72}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Convex Optimization}{74}{section.B.3}%
-\contentsline {subsection}{\numberline {B.3.1}Lagrange Multipliers}{74}{subsection.B.3.1}%
-\contentsline {subsection}{\numberline {B.3.2}Inequality Constraints}{76}{subsection.B.3.2}%
-\contentsline {subsection}{\numberline {B.3.3}Karush Kuhn-Tucker Conditions}{82}{subsection.B.3.3}%
-\contentsline {section}{\numberline {B.4}Semi-definite Programming}{86}{section.B.4}%
-\contentsline {section}{\numberline {B.5}Linear Programming}{90}{section.B.5}%
-\contentsline {section}{\numberline {B.6}Convex Polygon}{92}{section.B.6}%
-\contentsline {section}{\numberline {B.7}Complex Numbers: Optimization}{93}{section.B.7}%
+\contentsline {chapter}{\numberline {2}Gradient Descent}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Geometric Programming}{15}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Linear Programming}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Applications}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Miscellenaeous}{42}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Quadratic Programming}{53}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Semi-Definite Programming}{55}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Convex Functions}{61}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Line}{65}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Manual}{67}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Convex Functions}{67}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Gradient Descent Method}{70}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Convex Optimization}{72}{section.C.3}%
+\contentsline {subsection}{\numberline {C.3.1}Lagrange Multipliers}{72}{subsection.C.3.1}%
+\contentsline {subsection}{\numberline {C.3.2}Inequality Constraints}{74}{subsection.C.3.2}%
+\contentsline {subsection}{\numberline {C.3.3}Karush Kuhn-Tucker Conditions}{80}{subsection.C.3.3}%
+\contentsline {section}{\numberline {C.4}Semi-definite Programming}{84}{section.C.4}%
+\contentsline {section}{\numberline {C.5}Linear Programming}{88}{section.C.5}%
+\contentsline {section}{\numberline {C.6}Convex Polygon}{90}{section.C.6}%
+\contentsline {section}{\numberline {C.7}Complex Numbers: Optimization}{91}{section.C.7}%

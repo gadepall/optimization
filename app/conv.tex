@@ -48,5 +48,58 @@ For the inequality in \eqref{eq:app/convconvEq4} to be true,
 	a \geq 0 \because \lambda, 1-\lambda \geq 0, \brak{x_1-x_2}^2 \geq 0
 \end{align}
 However, $a \neq 0$, since it is a quadratic function. Hence $a > 0$, for $f\brak{x}$ to be convex.
+\item The quadratic form
+        \begin{align}
+            q\brak{\vec{x}} \triangleq \vec{x}^\top\vec{Ax} + \vec{b}^\top\vec{x} + c
+            \label{eq:quad-x}
+        \end{align}
+        is convex iff $\vec{A}$ is positive semi-definite.
+	\\
+	\solution
+	Consider two points $\vec{x_1}$ and $\vec{x_2}$, and a real constant
+        $0 \le \mu \le 1$. Then,
+        \begin{align}
+            &\mu f\brak{\vec{x_1}} + \brak{1-\mu}f\brak{\vec{x_2}} - f\brak{\mu\vec{x_1}+\brak{1-\mu}\vec{x_2}} \nonumber \\
+            &= \brak{\mu-\mu^2}\vec{x_1}^\top\vec{Ax_1} + \brak{1-\mu-\brak{1-\mu}^2}\vec{x_2}^\top\vec{Ax_2} \nonumber \\
+            &- 2\mu\brak{1-\mu}\vec{x_1}^\top\vec{Ax_2} \\
+            &= \mu\brak{1-\mu}\brak{\vec{x_1}^\top\vec{Ax_1}-2\vec{x_1}^\top\vec{Ax_2}+\vec{x_2}^\top\vec{Ax_2}} \\
+            &= \mu\brak{1-\mu}\brak{\vec{x_1}-\vec{x_2}}^\top\vec{A}\brak{\vec{x_1}-\vec{x_2}}
+            \label{eq:psd-iff}
+        \end{align}
+        Since $\vec{x_1}$ and $\vec{x_2}$ are arbitrary, it follows from 
+        \eqref{eq:psd-iff} that
+        \begin{align}
+            \mu f\brak{\vec{x_1}} + \brak{1-\mu}f\brak{\vec{x_2}} \ge f\brak{\mu\vec{x_1}+\brak{1-\mu}\vec{x_2}}
+        \end{align}
+        iff $\vec{A}$ is positive semi-definite, as required.
+
+\item     Let
+	\begin{align}
+        \vec{M} &\triangleq \myvec{\vec{m_1} & \vec{m_2}} \label{eq:app-M-def} \\
+        \bm{\lambda} &\triangleq \myvec{\lambda_1\\-\lambda_2} \label{eq:app-lambda-def} \\
+    \end{align}
+	The function 
+	\begin{align}
+        f\brak{\bm{\lambda}} \triangleq 
+                               \norm{\vec{M}\bm{\lambda}-\vec{x}}^2 
+        \label{eq:app-f-def}
+    \end{align}
+    is convex.
+    \\
+    \solution
+        \eqref{eq:app-f-def} can be expressed as
+\begin{align}
+	\brak{\vec{M}\bm{\lambda}-\vec{x}}^\top\brak{\vec{M}\bm{\lambda}-\vec{x}}
+\end{align}
+Consider $\bm{\lambda}_1$ and 
+    $\bm{\lambda}_2$ and let $0 \le \mu \le 1$. Then,
+    \begin{align}
+        f\brak{\mu\bm{\lambda}_1+\brak{1-\mu}\bm{\lambda}_2} 
+        &= \norm{\vec{M}\brak{\mu\bm{\lambda}_1+\brak{1-\mu}\bm{\lambda}_2}-\vec{x}} \\
+        &= \norm{\mu\brak{\vec{M}\bm{\lambda}_1-\vec{x}}+\brak{1-\mu}\brak{\vec{M}\bm{\lambda}_2-\vec{x}}} \\
+        &\le \mu\norm{\vec{M\lambda_1}-\vec{x}} + \brak{1-\mu}\norm{\vec{M\lambda_2}-\vec{x}}
+        \label{eq:app-convex-ineq}
+    \end{align}
+    Where \eqref{eq:app-convex-ineq} follows from the triangle inequality.
 \end{enumerate}
 

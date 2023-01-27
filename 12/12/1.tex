@@ -1,9 +1,19 @@
 \begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
-\item
+\item Maximize
 \label{12/12/1/1}
-%\input{12/12/1/1/linear.tex}
+\begin{align}
+	\label{eq:12/12/1/1/Obj_func}
+	Z = 3x + 4y
+\end{align}
+subject to the constraints:
+\begin{align}
+	x+4y \leq 4, \\ 
+	x \geq 0, y \geq 0
+\end{align}
+\solution 
+\input{12/12/1/1/lp.tex}
 \item
 \label{12/12/1/2}
 \input{12/12/1/2/linear.tex}

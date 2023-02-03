@@ -1,23 +1,22 @@
 \BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.1}{Convex Functons}{}% 2
-\BOOKMARK [0][-]{chapter.2}{Gradient Descent}{}% 3
-\BOOKMARK [0][-]{chapter.3}{Geometric Programming}{}% 4
-\BOOKMARK [0][-]{chapter.4}{Linear Programming}{}% 5
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 6
-\BOOKMARK [1][-]{section.4.2}{Applications}{chapter.4}% 7
-\BOOKMARK [1][-]{section.4.3}{Miscellenaeous}{chapter.4}% 8
-\BOOKMARK [0][-]{chapter.5}{Quadratic Programming}{}% 9
-\BOOKMARK [0][-]{chapter.6}{Semi-Definite Programming}{}% 10
-\BOOKMARK [0][-]{appendix.A}{Convex Functions}{}% 11
-\BOOKMARK [0][-]{appendix.B}{Line}{}% 12
-\BOOKMARK [0][-]{appendix.C}{Manual}{}% 13
-\BOOKMARK [1][-]{section.C.1}{Convex Functions}{appendix.C}% 14
-\BOOKMARK [1][-]{section.C.2}{Gradient Descent Method}{appendix.C}% 15
-\BOOKMARK [1][-]{section.C.3}{Convex Optimization}{appendix.C}% 16
-\BOOKMARK [2][-]{subsection.C.3.1}{Lagrange Multipliers}{section.C.3}% 17
-\BOOKMARK [2][-]{subsection.C.3.2}{Inequality Constraints}{section.C.3}% 18
-\BOOKMARK [2][-]{subsection.C.3.3}{Karush Kuhn-Tucker Conditions}{section.C.3}% 19
-\BOOKMARK [1][-]{section.C.4}{Semi-definite Programming}{appendix.C}% 20
-\BOOKMARK [1][-]{section.C.5}{Linear Programming}{appendix.C}% 21
-\BOOKMARK [1][-]{section.C.6}{Convex Polygon}{appendix.C}% 22
-\BOOKMARK [1][-]{section.C.7}{Complex Numbers: Optimization}{appendix.C}% 23
+\BOOKMARK [0][-]{chapter.1}{Problem Formulation}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Convex Functons}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Examples}{chapter.2}% 5
+\BOOKMARK [0][-]{chapter.3}{Gradient Descent}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Definition}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{Examples}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Convex Optimization}{}% 9
+\BOOKMARK [1][-]{section.4.1}{Lagrange Multipliers}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.2}{Inequality Constraints}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.3}{KKT Conditions}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Geometric Programming}{}% 13
+\BOOKMARK [0][-]{chapter.6}{Linear Programming}{}% 14
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 15
+\BOOKMARK [1][-]{section.6.2}{Applications}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.3}{Miscellenaeous}{chapter.6}% 17
+\BOOKMARK [0][-]{chapter.7}{Quadratic Programming}{}% 18
+\BOOKMARK [0][-]{chapter.8}{Semi-Definite Programming}{}% 19
+\BOOKMARK [0][-]{appendix.A}{Convex Functions}{}% 20
+\BOOKMARK [0][-]{appendix.B}{Line}{}% 21
+\BOOKMARK [0][-]{appendix.C}{Manual}{}% 22

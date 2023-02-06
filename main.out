@@ -10,13 +10,20 @@
 \BOOKMARK [1][-]{section.4.1}{Lagrange Multipliers}{chapter.4}% 10
 \BOOKMARK [1][-]{section.4.2}{Inequality Constraints}{chapter.4}% 11
 \BOOKMARK [1][-]{section.4.3}{KKT Conditions}{chapter.4}% 12
-\BOOKMARK [0][-]{chapter.5}{Geometric Programming}{}% 13
-\BOOKMARK [0][-]{chapter.6}{Linear Programming}{}% 14
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 15
-\BOOKMARK [1][-]{section.6.2}{Applications}{chapter.6}% 16
-\BOOKMARK [1][-]{section.6.3}{Miscellenaeous}{chapter.6}% 17
-\BOOKMARK [0][-]{chapter.7}{Quadratic Programming}{}% 18
-\BOOKMARK [0][-]{chapter.8}{Semi-Definite Programming}{}% 19
-\BOOKMARK [0][-]{appendix.A}{Convex Functions}{}% 20
-\BOOKMARK [0][-]{appendix.B}{Line}{}% 21
-\BOOKMARK [0][-]{appendix.C}{Manual}{}% 22
+\BOOKMARK [1][-]{section.4.4}{Examples}{chapter.4}% 13
+\BOOKMARK [0][-]{chapter.5}{Geometric Programming}{}% 14
+\BOOKMARK [1][-]{section.5.1}{Definition}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.2}{Examples}{chapter.5}% 16
+\BOOKMARK [0][-]{chapter.6}{Quadratic Programming}{}% 17
+\BOOKMARK [1][-]{section.6.1}{Definition}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.2}{Examples}{chapter.6}% 19
+\BOOKMARK [0][-]{chapter.7}{Semi-Definite Programming}{}% 20
+\BOOKMARK [1][-]{section.7.1}{Definition}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.2}{Examples}{chapter.7}% 22
+\BOOKMARK [0][-]{chapter.8}{Linear Programming}{}% 23
+\BOOKMARK [1][-]{section.8.1}{Definition}{chapter.8}% 24
+\BOOKMARK [1][-]{section.8.2}{Applications}{chapter.8}% 25
+\BOOKMARK [1][-]{section.8.3}{Miscellenaeous}{chapter.8}% 26
+\BOOKMARK [0][-]{appendix.A}{Convex Functions}{}% 27
+\BOOKMARK [0][-]{appendix.B}{Line}{}% 28
+\BOOKMARK [0][-]{appendix.C}{Manual}{}% 29

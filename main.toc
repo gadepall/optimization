@@ -10,14 +10,21 @@
 \contentsline {chapter}{\numberline {4}Convex Optimization}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Lagrange Multipliers}{25}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Inequality Constraints}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}KKT Conditions}{29}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Geometric Programming}{31}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Linear Programming}{33}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{33}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Applications}{46}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Miscellenaeous}{58}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Quadratic Programming}{69}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Semi-Definite Programming}{71}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Convex Functions}{77}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Line}{81}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Manual}{83}{appendix.C}%
+\contentsline {section}{\numberline {4.3}KKT Conditions}{33}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Examples}{38}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Geometric Programming}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Definition}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Examples}{40}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Quadratic Programming}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Definition}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Examples}{43}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Semi-Definite Programming}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Definition}{45}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Examples}{48}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Linear Programming}{53}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definition}{53}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Applications}{66}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Miscellenaeous}{78}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Convex Functions}{89}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Line}{93}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Manual}{95}{appendix.C}%

@@ -22,7 +22,6 @@ This problem reduces to finding the radius of the smallest circle in the shaded 
 \begin{lstlisting}
 opt/codes/2.4.py
 \end{lstlisting}
-\end{enumerate}
 
 %
 \begin{figure}[!ht]
@@ -31,7 +30,6 @@ opt/codes/2.4.py
 \caption{ Smallest circle in the shaded region is a point.}
 \label{fig.2.4}	
 \end{figure}
-\iffalse
 %
 \item
 \label{ch2_lagrange_fail}
@@ -43,7 +41,7 @@ Now use the method of Lagrange multipliers to solve  problem \ref{ch2_constraint
 Repeat problem \ref{ch2_lagrange_fail} by keeping 
  $\lambda=0$.   Comment.
 
-\solution Keeping $\lambda = 0$ results in $\vec{x}=\myvec{ 8\\ 6}$, which is the correct solution.  The minimum value of $f\brak{\mbf{x}}$ without any constraints lies in the region $g\brak{\mbf{x}} = 0$.  In this case, $\lambda = 0$.  
+\solution Keeping $\lambda = 0$ results in $\vec{x}=\myvec{ 3\\ -5}$, which is the correct solution.  The minimum value of $f\brak{\mbf{x}}$ without any constraints lies in the region $g\brak{\mbf{x}} = 0$.  In this case, $\lambda = 0$.  
 %
 %
 \item
@@ -61,6 +59,8 @@ g\brak{\mbf{x}} \leq 0
 \end{align}
 Summarize your observations.
 
+\end{enumerate}
+\iffalse
 %
 \solution In Fig. \ref{fig.2.7}, the shaded region represents the constraint.  Thus, the solution is the same as the one in problem \ref{ch2_constraint}. This implies that the method of
 Lagrange multipliers can be used to solve the optimization problem with this inequality constraint as well.  Table \ref{table.2.7} summarizes the conditions for this based on the observations so far.

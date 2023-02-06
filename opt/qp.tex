@@ -1,5 +1,5 @@
 \renewcommand{\theequation}{\theenumi}
-\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 \numberwithin{equation}{enumi}
 
 \item An apache helicopter of the enemy is flying along the curve given by 
@@ -67,7 +67,7 @@ d &= 7
 \end{align}
 
 \begin{lstlisting}
-codes/opt/qp_cvx.py
+opt/codes/qp_cvx.py
 \end{lstlisting}
 
 \item Solve \eqref{eq:qp_dist_pt_parab_conv} using the method of Lagrange multipliers.
@@ -84,7 +84,7 @@ codes/opt/qp_parab.py
 %
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{./figs/opt/qp_parab.eps}
+\includegraphics[width=\columnwidth]{./opt/figs/qp_parab.eps}
 \caption{ $\vec{Q}$ is closest to $\vec{P}$}.
 \label{fig:qp_parab}
 \end{figure}

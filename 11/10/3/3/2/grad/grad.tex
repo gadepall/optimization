@@ -53,27 +53,21 @@ where
 \end{align}
 Let $\vec{O}$ be the origin. The perpendicular distance will be the minimum distance from $\vec{O}$ to the line. Let $\vec{P}$ be the foot of perpendicular. This problem can be formulated as an optimization problem as follows:
 \begin{align}
-	& \min_{\vec{x}}\norm{\vec{x}-\vec{O}}^2\\
-	& \implies \min_{\lambda}\norm{\vec{A}+\lambda\vec{m}-\vec{O}}^2\\
-	& \implies \min_{\lambda}\norm{\vec{A}+\lambda\vec{m}}^2\\
-	\implies f\brak{\lambda} &= \norm{\vec{A+\lambda\vec{m}}}^2\\
-	&= \brak{\vec{A}+\lambda\vec{m}}^\top\brak{\vec{A}+\lambda\vec{m}}\\
-	&= \norm{\vec{A}}^2+\vec{A}^\top\brak{\lambda\vec{m}}+\brak{\lambda\vec{m}}^\top\vec{A}+\brak{\lambda\vec{m}}^\top\brak{\lambda\vec{m}}\\
-	&= \norm{\vec{A}}^2+\lambda\vec{A}^\top\vec{m}+\lambda\vec{m}^\top\vec{A}+\lambda^2\norm{\vec{m}}^2\\
-	&= \norm{\vec{m}}^2\lambda^2+\brak{\vec{A}^\top\vec{m}+\vec{m}^\top\vec{A}}\lambda+\norm{\vec{A}}^2\\
+	d_{\min} &= 	 \min_{\vec{x}}\norm{\vec{x}-\vec{O}}^2\\
+	 &= \min_{\lambda}\norm{\vec{A}+\lambda\vec{m}-\vec{O}}^2\\
+	&= \norm{\vec{m}}^2\lambda^2+2\lambda\vec{A}^\top\vec{m}+\norm{\vec{A}}^2
 	\label{eq:11/10/3/3/2/grad/eq3}
-	&= \lambda^2+4\lambda+8
-\end{align}
-$\because$ the coefficient of $\lambda^2>0$, equation \eqref{eq:11/10/3/3/2/grad/eq3} is a convex function
-\begin{align}
+	\\
+	&= \lambda^2+4\lambda+8 = f^\prime\brak{\lambda} 
 	\label{eq:11/10/3/3/2/grad/eq4}
-	f^\prime\brak{\lambda} = 2\lambda+4
 \end{align}
-Computing $\lambda_{min}$ using Gradient Descent method:
+upon substituting numerical values.
+$\because$ the coefficient of $\lambda^2>0$, \eqref{eq:11/10/3/3/2/grad/eq3} is a convex function
+The update equation using Gradient Descent is
 \begin{align}
 	\lambda_{n+1} &= \lambda_n - \alpha\nabla f\brak{\lambda_n}\\
 	\label{eq:11/10/3/3/2/grad/eq5}
-	\lambda_{n+1} &= \brak{1-2\alpha}\lambda_{n} - 4\alpha
+ &= \brak{1-2\alpha}\lambda_{n} - 4\alpha
 \end{align}
 Taking one-sided Z-transform on both sides of \eqref{eq:11/10/3/3/2/grad/eq5},
 \begin{align}
@@ -111,7 +105,7 @@ Choosing
 	&= \norm{\myvec{0\\2}-\myvec{0\\0}}\\
 	&= 2
 \end{align}
-See figure \ref{fig:11/10/3/3/2/grad/Fig1} and figure \ref{fig:11/10/3/3/2/grad/Fig2}
+See Fig. \ref{fig:11/10/3/3/2/grad/Fig1} and Fig. \ref{fig:11/10/3/3/2/grad/Fig2}
 \begin{figure}[!h]
 	\begin{center} 
 	    \includegraphics[width=\columnwidth]{11/10/3/3/2/grad/figs/opt1}

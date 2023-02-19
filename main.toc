@@ -3,28 +3,29 @@
 \contentsline {chapter}{\numberline {1}Problem Formulation}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Convex Functons}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Definition}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Examples}{7}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Gradient Descent}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Definition}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Examples}{12}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Convex Optimization}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Lagrange Multipliers}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Inequality Constraints}{32}{section.4.2}%
-\contentsline {section}{\numberline {4.3}KKT Conditions}{37}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Examples}{43}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Geometric Programming}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Definition}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Examples}{50}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Quadratic Programming}{51}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Definition}{51}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Examples}{53}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Semi-Definite Programming}{55}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Definition}{55}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Examples}{58}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Linear Programming}{63}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Definition}{63}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Applications}{76}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Miscellenaeous}{88}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Convex Functions}{99}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Line}{103}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Manual}{105}{appendix.C}%
+\contentsline {section}{\numberline {2.2}Convex Examples}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Nonconvex Examples}{19}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Gradient Descent}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definition}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Examples}{22}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Optimization}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lagrange Multipliers}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Inequality Constraints}{52}{section.4.2}%
+\contentsline {section}{\numberline {4.3}KKT Conditions}{57}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Examples}{63}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Geometric Programming}{77}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Definition}{77}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Examples}{78}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Quadratic Programming}{81}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Definition}{81}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Examples}{84}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Semi-Definite Programming}{87}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Definition}{87}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Examples}{90}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Linear Programming}{97}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definition}{97}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Applications}{110}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Miscellenaeous}{122}{section.8.3}%
+\contentsline {chapter}{\numberline {A}Convex Functions}{133}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Line}{139}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Manual}{141}{appendix.C}%

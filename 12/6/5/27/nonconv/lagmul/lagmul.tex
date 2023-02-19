@@ -105,48 +105,31 @@ columns=fullflexible
 \end{abstract}
 
 \begin{enumerate}
-   
+  
     \solution 
-\fi
+    \fi
 		We need to find
     \begin{align}
-        \min_{\vec{x}} g\brak{\vec{x}} &= \norm{\vec{x}-\vec{P}}^2 \label{eq:12/6/5/27/cost} \\
-        \textrm{s.t. } h\brak{\vec{x}} &= \vec{x}^\top\vec{Vx} + 2\vec{u}^\top\vec{x} = 0 \label{eq:12/6/5/27/constr}
+        \min_{\vec{x}} g\brak{\vec{x}} &= \norm{\vec{x}-\vec{P}}^2 \label{eq:12/6/5/27/nonconv/lagmul/cost} \\
+        \textrm{s.t. } h\brak{\vec{x}} &= \vec{x}^\top\vec{Vx} + 2\vec{u}^\top\vec{x} = 0 \label{eq:12/6/5/27/nonconv/lagmul/constr}
     \end{align}
     where
     \begin{align}
         \vec{V} = \myvec{1&0\\0&0},\ \vec{u} = \myvec{0\\-1}
     \end{align}
-    First, we show that \eqref{eq:12/6/5/27/constr} is nonconvex. Indeed, suppose 
-    $\vec{x_1}$ and $\vec{x_2}$ satisfy $h\brak{\vec{x}} = 0$. Then, 
-    \begin{align}
-        \vec{x_1}^\top\vec{Vx_1} + 2\vec{u}^\top\vec{x_1} + f &= 0 \label{eq:12/6/5/27/x1-parab} \\
-        \vec{x_2}^\top\vec{Vx_2} + 2\vec{u}^\top\vec{x_2} + f &= 0 \label{eq:12/6/5/27/x2-parab}
-    \end{align}
-    Then, for any $0 \le \lambda \le 1$, substituting
-    \begin{align}
-        \vec{x_\lambda} \leftarrow \lambda\vec{x_1} + \brak{1-\lambda}\vec{x_2}
-    \end{align}
-    into \eqref{eq:12/6/5/27/constr}, we get
-    \begin{align}
-        h\brak{\vec{x_\lambda}} = \lambda\brak{\lambda-1}\brak{\vec{x_1}-\vec{x_2}}^\top\vec{V}\brak{\vec{x_1}-\vec{x_2}} + f \neq 0
-        \label{eq:12/6/5/27/nonconvex}
-    \end{align}
-    Hence, the optimization problem is nonconvex. The constraints
-    throw an error when \textit{cvxpy} is used, as shown in the erroneous Python code
-    \texttt{codes/parab\_cvx.py}.
 
-    We use the method of Lagrange multipliers instead to find the optima. Here, 
-    we need to find $\lambda \in \mathbb{R}$ such that there exists a $\vec{x}$ 
+    Since the given optimization problem is nonconvex, we use the method of 
+    Lagrange multipliers to find the optima. Here, we need to find 
+    $\lambda \in \mathbb{R}$ such that there exists a $\vec{x}$ 
     satisfying
     \begin{align}
         \nabla g\brak{\vec{x}} &= \lambda\nabla h\brak{\vec{x}} \\
         \implies 2\brak{\vec{x}-\vec{P}} &= 2\lambda\brak{\vec{Ax}+\vec{u}} \\
         \implies \brak{\vec{I}-\lambda\vec{A}}\vec{x} &= \lambda\vec{u} + \vec{P} \\
         \implies \myvec{1-\lambda&0\\0&1}\vec{x} &= \myvec{0\\5-\lambda}
-        \label{eq:12/6/5/27/lagmul}
+        \label{eq:12/6/5/27/nonconv/lagmul/lagmul}
     \end{align}
-    From \eqref{eq:12/6/5/27/lagmul}, we have two cases:
+    From \eqref{eq:12/6/5/27/nonconv/lagmul/lagmul}, we have two cases:
     \begin{enumerate}
         \item $\lambda \neq 1$. In this case, we form the augmented matrix
         \begin{align}
@@ -156,22 +139,22 @@ columns=fullflexible
         \begin{align}
             \vec{x_m} = \myvec{0\\5-\lambda}
         \end{align}
-        Substituting in \eqref{eq:12/6/5/27/constr} gives $\lambda = 5$. Thus, 
+        Substituting in \eqref{eq:12/6/5/27/nonconv/lagmul/constr} gives $\lambda = 5$. Thus, 
         $\vec{x_m} = \vec{0}$.
 
-        \item $\lambda = 1$. In this case, \eqref{eq:12/6/5/27/lagmul} becomes
+        \item $\lambda = 1$. In this case, \eqref{eq:12/6/5/27/nonconv/lagmul/lagmul} becomes
         \begin{align}
             \myvec{0&0\\0&1}\vec{x} &= \myvec{0\\4} \\
             \implies \vec{e_2}^\top\vec{x} = 4
-            \label{eq:12/6/5/27/x-e2}
+            \label{eq:12/6/5/27/nonconv/lagmul/x-e2}
         \end{align}
-        Substituting \eqref{eq:12/6/5/27/x-e2} into \eqref{eq:12/6/5/27/constr} becomes
+        Substituting \eqref{eq:12/6/5/27/nonconv/lagmul/x-e2} into \eqref{eq:12/6/5/27/nonconv/lagmul/constr} becomes
         \begin{align}
             \brak{\vec{e_1}^\top\vec{x}}^2 &= 8 \\
             \implies \vec{e_1}^\top\vec{x} &= \pm 2\sqrt{2}
-            \label{eq:12/6/5/27/x-e1}
+            \label{eq:12/6/5/27/nonconv/lagmul/x-e1}
         \end{align}
-        Using \eqref{eq:12/6/5/27/x-e1} and \eqref{eq:12/6/5/27/x-e2},
+        Using \eqref{eq:12/6/5/27/nonconv/lagmul/x-e1} and \eqref{eq:12/6/5/27/nonconv/lagmul/x-e2},
         \begin{align}
             \vec{x_m} = \myvec{\pm 2\sqrt{2}\\4}
         \end{align}
@@ -180,16 +163,6 @@ columns=fullflexible
     \begin{align}
         \norm{\myvec{0\\5}-\myvec{0\\0}} &= 5 \\
         \norm{\myvec{0\\5}-\myvec{\pm 2\sqrt{2}\\4}} &= 3
-        \label{eq:12/6/5/27/true-min}
+        \label{eq:12/6/5/27/nonconv/lagmul/true-min}
     \end{align}
     Thus, the correct answer is \textbf{a)}.
-
-    We demonstrate both of the minima in \eqref{eq:12/6/5/27/true-min} is obtained using 
-    constrained gradient descent in Fig. \ref{fig:12/6/5/27/gd-pits}, plotted using the 
-    Python code \texttt{codes/grad\_pits.py}.
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=\columnwidth]{12/6/5/27/figs/grad_pits.png}
-        \caption{Gradient descent for a nonconvex optimization problem.}
-        \label{fig:12/6/5/27/gd-pits}
-    \end{figure}

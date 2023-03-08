@@ -1,0 +1,106 @@
+\begin{enumerate}[label=\thechapter.\arabic*,ref=\thechapter.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+
+  \item The point on the curve 
+    \begin{align}
+        x^2 = 2y
+        \label{eq:12/6/5/27/nonconv/lagmul/curve}
+    \end{align}
+    which is nearest to the point 
+    $\vec{P} = \myvec{0\\5}$ is
+    \begin{enumerate}
+        \item $\myvec{2\sqrt{2}\\4}$
+        \item $\myvec{2\sqrt{2}\\0}$
+        \item $\myvec{0\\0}$
+        \item $\myvec{2\\2}$
+    \end{enumerate}
+\solution 
+		\begin{enumerate}
+	\item Optimization Problem
+		\\
+	\item  Gradient Descent
+		\\
+\label{12/6/5/27/nonconv/grad}
+\input{12/6/5/27/nonconv/grad/grad.tex}
+\item Convex Constraint
+	\\
+\label{12/6/5/27/conv/grad}
+\input{12/6/5/27/conv/grad/grad.tex}
+\item  Lagrange Multipliers
+	\\
+\label{12/6/5/27/nonconv/lagmul}
+\input{12/6/5/27/nonconv/lagmul/lagmul.tex}
+		\end{enumerate}
+ \item Find the point on the curve 
+    \begin{align}
+        x^2 = 2y
+        \label{eq:curve}
+        %\label{eq:12/6/5/27/conv/conv/curve}
+    \end{align}
+    which is nearest to the point $\vec{P} = \myvec{2\\1}$.
+    \\
+\solution 
+		\begin{enumerate}
+			\item Quadratic Progamming
+				\\
+\label{12/6/5/27/conv/conv}
+\input{12/6/5/27/conv/conv/conv.tex} 
+\item Semi-definite Programming
+	\\
+\label{12/6/5/27/conv/sdp}
+\input{12/6/5/27/conv/sdp/semi.tex}
+%	We	
+%    apply the semidefinite relaxation to get the following problem.
+%    \begin{align}
+%        \min_{\vec{X}}&\textrm{ tr}\brak{\vec{CX}} \label{eq:12/6/5/27/conv/conv/sdp-cost} \\
+%        \textrm{s.t. }&\textrm{ tr}\brak{\vec{AX}} \le 0 \label{eq:12/6/5/27/conv/conv/sdp-constr} \\
+%                      &\vec{X} \succeq 0
+%    \end{align}
+%    where
+%    \begin{align}
+%        \vec{C} &= \myvec{\vec{I}&-\vec{P}\\-\vec{P}^\top&\norm{\vec{P}}^2} \label{eq:12/6/5/27/conv/conv/C-def} \\
+%        \vec{A} &= \myvec{\vec{V}&\vec{u}\\\vec{u}^\top&f} \label{eq:12/6/5/27/conv/conv/A-def}
+%    \end{align}
+%    The problem is solved using \textit{cvxpy} in the Python codes 
+%    \texttt{codes/parab\_qp.py} using QP and \texttt{codes/parab\_sdp.py}
+%    using SDP.
+\item  Lagrange Multipliers
+\label{12/6/5/27/conv/lagmul}
+\input{12/6/5/27/conv/lagmul/lagmul.tex}
+		\end{enumerate}
+\item  Find the equation of the normal to the curve $x^2=4y$ which passes through the point (4,-2)
+		\\
+		\solution
+		\begin{enumerate}
+			\item Quadratic Progamming
+\input{12/6/6/4/conv/conv.tex}
+\item Semi-definite Programming
+\input{12/6/6/4/sdp/sdp.tex}
+		\end{enumerate}
+
+
+\item
+\label{12/6/6/22}
+\input{12/6/6/22/sdp.tex}
+
+	\item Find the equation of the normal to the curve $x^2=4y$ and passing through the point $(1,2)$.
+    \\
+\solution 
+		\begin{enumerate}
+	\item Optimization Problem
+		\\
+\input{12/6/6/23/conv/conv.tex}
+\item Semi-definite Programming
+\label{12/6/6/23}
+\input{12/6/6/23/sdp.tex}
+\item  Lagrange Multipliers
+	\\
+\label{12/6/6/23/lagmul}
+\input{12/6/6/23/lagmul/lagmul.tex}
+		\end{enumerate}
+
+
+
+\end{enumerate}

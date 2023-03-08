@@ -3,29 +3,29 @@
 \contentsline {chapter}{\numberline {1}Problem Formulation}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Convex Functons}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Definition}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Convex Examples}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Nonconvex Examples}{19}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Gradient Descent}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Definition}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Examples}{22}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Optimization}{49}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Lagrange Multipliers}{49}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Inequality Constraints}{52}{section.4.2}%
-\contentsline {section}{\numberline {4.3}KKT Conditions}{57}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Examples}{63}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Geometric Programming}{77}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Definition}{77}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Examples}{78}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Quadratic Programming}{81}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Definition}{81}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Examples}{84}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Semi-Definite Programming}{87}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Definition}{87}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Examples}{90}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Linear Programming}{97}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Definition}{97}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Applications}{110}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Miscellenaeous}{122}{section.8.3}%
-\contentsline {chapter}{\numberline {A}Convex Functions}{133}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Line}{139}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Manual}{141}{appendix.C}%
+\contentsline {section}{\numberline {2.2}Nonconvex Examples}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Gradient Descent}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definition}{11}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Miscellaneous}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Optimization}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Lagrange Multipliers}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Inequality Constraints}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}KKT Conditions}{33}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Distance from a Line}{39}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Quadratic Programming}{71}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Definition}{71}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Semi-Definite Programming}{75}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definition}{75}{section.8.1}%
+\contentsline {chapter}{\numberline {9}Distance from a Conic}{79}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Geometric Programming}{101}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Definition}{101}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Examples}{102}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Linear Programming}{109}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Definition}{109}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Applications}{122}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Miscellenaeous}{134}{section.11.3}%
+\contentsline {chapter}{\numberline {12}Exemplar}{145}{chapter.12}%
+\contentsline {section}{Long Answer (L.A)}{145}{Item.180}%
+\contentsline {chapter}{\numberline {A}Convex Functions}{149}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Line}{155}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Manual}{157}{appendix.C}%

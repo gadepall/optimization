@@ -2,29 +2,29 @@
 \BOOKMARK [0][-]{chapter.1}{Problem Formulation}{}% 2
 \BOOKMARK [0][-]{chapter.2}{Convex Functons}{}% 3
 \BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.2}{Nonconvex Examples}{chapter.2}% 5
-\BOOKMARK [0][-]{chapter.3}{Gradient Descent}{}% 6
-\BOOKMARK [1][-]{section.3.1}{Definition}{chapter.3}% 7
-\BOOKMARK [0][-]{chapter.4}{Miscellaneous}{}% 8
-\BOOKMARK [0][-]{chapter.5}{Optimization}{}% 9
-\BOOKMARK [1][-]{section.5.1}{Lagrange Multipliers}{chapter.5}% 10
-\BOOKMARK [1][-]{section.5.2}{Inequality Constraints}{chapter.5}% 11
-\BOOKMARK [1][-]{section.5.3}{KKT Conditions}{chapter.5}% 12
-\BOOKMARK [0][-]{chapter.6}{Distance from a Line}{}% 13
-\BOOKMARK [0][-]{chapter.7}{Quadratic Programming}{}% 14
-\BOOKMARK [1][-]{section.7.1}{Definition}{chapter.7}% 15
-\BOOKMARK [0][-]{chapter.8}{Semi-Definite Programming}{}% 16
-\BOOKMARK [1][-]{section.8.1}{Definition}{chapter.8}% 17
-\BOOKMARK [0][-]{chapter.9}{Distance from a Conic}{}% 18
-\BOOKMARK [0][-]{chapter.10}{Geometric Programming}{}% 19
-\BOOKMARK [1][-]{section.10.1}{Definition}{chapter.10}% 20
-\BOOKMARK [1][-]{section.10.2}{Examples}{chapter.10}% 21
-\BOOKMARK [0][-]{chapter.11}{Linear Programming}{}% 22
-\BOOKMARK [1][-]{section.11.1}{Definition}{chapter.11}% 23
-\BOOKMARK [1][-]{section.11.2}{Applications}{chapter.11}% 24
-\BOOKMARK [1][-]{section.11.3}{Miscellenaeous}{chapter.11}% 25
-\BOOKMARK [0][-]{chapter.12}{Exemplar}{}% 26
-\BOOKMARK [1][-]{Item.180}{Long Answer \(L.A\)}{chapter.12}% 27
+\BOOKMARK [0][-]{chapter.3}{Gradient Descent}{}% 5
+\BOOKMARK [1][-]{section.3.1}{Definition}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.2}{Examples}{chapter.3}% 7
+\BOOKMARK [0][-]{chapter.4}{Optimization}{}% 8
+\BOOKMARK [1][-]{section.4.1}{Lagrange Multipliers}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.2}{Inequality Constraints}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.3}{KKT Conditions}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.4}{Examples}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Distance from a Line}{}% 13
+\BOOKMARK [0][-]{chapter.6}{Quadratic Programming}{}% 14
+\BOOKMARK [1][-]{section.6.1}{Definition}{chapter.6}% 15
+\BOOKMARK [0][-]{chapter.7}{Semi-Definite Programming}{}% 16
+\BOOKMARK [1][-]{section.7.1}{Definition}{chapter.7}% 17
+\BOOKMARK [0][-]{chapter.8}{Distance from a Conic}{}% 18
+\BOOKMARK [0][-]{chapter.9}{Geometric Programming}{}% 19
+\BOOKMARK [1][-]{section.9.1}{Definition}{chapter.9}% 20
+\BOOKMARK [1][-]{section.9.2}{Examples}{chapter.9}% 21
+\BOOKMARK [0][-]{chapter.10}{Linear Programming}{}% 22
+\BOOKMARK [1][-]{section.10.1}{Definition}{chapter.10}% 23
+\BOOKMARK [1][-]{section.10.2}{Applications}{chapter.10}% 24
+\BOOKMARK [1][-]{section.10.3}{Miscellenaeous}{chapter.10}% 25
+\BOOKMARK [0][-]{chapter.11}{Exemplar}{}% 26
+\BOOKMARK [1][-]{Item.194}{Long Answer \(L.A\)}{chapter.11}% 27
 \BOOKMARK [0][-]{appendix.A}{Convex Functions}{}% 28
 \BOOKMARK [0][-]{appendix.B}{Line}{}% 29
 \BOOKMARK [0][-]{appendix.C}{Manual}{}% 30

@@ -1,0 +1,195 @@
+\iffalse
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{romannum}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape 12/6/5/17/tables/ embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+
+
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+
+\title{Assignment 5}
+\author{Jaswanth Chowdary Madala}
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\textbf{Solution:} 
+	\fi
+		Let the given side of tin be $a$.
+\begin{align}
+a = 18cm
+\end{align}
+Lets cut a square of side $x$ from each corner then the box formed folding up the flaps has dimensions as
+\begin{align}
+l = a-2x, \, b = a-2x, \, h = x
+\end{align}
+The length, breadth, height are positive. These give the constraints on $x$
+\begin{align}
+a-2x > 0,\,  x > 0\\
+\implies 0 < x < \frac{a}{2} \label{eq:12/6/5/17/1}
+\end{align} 
+Volume of the box is given by
+\begin{align}
+V\brak{x} = x(a-2x)^2
+\end{align}
+\begin{enumerate}
+\item We now check the convexity of the function $V\brak{x}$ under the constraints given by \eqref{eq:12/6/5/17/1}
+\begin{align}
+V^{\prime}\brak{x} &= (a-2x)(a-6x)\\
+V^{\prime\prime}\brak{x} &= 8(3x - a)
+\end{align}
+For $x > \frac{a}{3}$ the function $V\brak{x}$ is convex. The function convexity is changing under the constraints. So the given problem cannot be expressed as a Convex optimization problem. 
+\item The problem can be solved using the Gradient Descent Algorithm. It can be modified as
+\begin{align}
+\min_{x}f(x) = -V\brak{x} \label{eq:12/6/5/17/2}
+\end{align}
+Here we have,
+\begin{align}
+f(x) &= -x(a-2x)^2 \label{eq:12/6/5/17/3}\\
+f^{\prime}\brak{x} &= -(a-2x)(a-6x) \label{eq:12/6/5/17/4}
+\end{align}
+A numerical solution for \eqref{eq:12/6/5/17/2} is obtained as
+\begin{align}
+\lambda_{n+1} &= \lambda_{n} - \alpha f^{\prime}\brak{x}
+\end{align}
+where $\lambda_0$ is an inital guess and $\mu$ is a variable parameter. These parameters decide how fast the algorithm converges.
+By taking the parameters as listed in the below table
+\begin{table}[h]
+\centering
+\input{12/6/5/17/grad/tables/table1.tex}
+\caption{}
+\label{tab:12/6/5/17/1}
+\end{table}
+
+The value of $x$ obtained is
+\begin{align}
+x = 3
+\end{align}
+From equation \eqref{eq:12/6/5/17/2}, the minimum value of $f\brak{x}$ is equivalent to maximum value of $V\brak{x}$. Hence the maximum value of $V\brak{x}$ occurs at $x = 3$.
+\begin{align}
+V\brak{3} = 432 
+\end{align}
+\end{enumerate}

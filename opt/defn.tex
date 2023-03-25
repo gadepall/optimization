@@ -18,16 +18,16 @@ as an optimization problem.
 \label{eq:opt_line_dist}
 \min_{\vec{x}}g(\vec{x}) &= \norm{\vec{x}-\vec{P}}^2
 \\
-\text{s.t.} \quad \vec{n}^T\vec{x} &= c
+\text{s.t.} \quad \vec{n}^{\top}\vec{x} &= c
 \label{eq:opt_line_dist_nor}
 \end{align}
 %
 where 
 %
 \begin{align}
-\vec{n} &= \myvec{1\\1}
-\\
-c&=9
+\vec{n} = \myvec{1\\1}
+,\,
+c=9
 \end{align}
 %
 \item Explain Problem \ref{prob:opt_line_dist} through a plot and find a graphical solution.
@@ -38,13 +38,13 @@ c&=9
 \solution  The following code yields
 %	
 \begin{lstlisting}
-codes/opt/line_dist_cvx.py
+opt/codes/line_dist_cvx.py
 \end{lstlisting}
 %
 \begin{align}
-\vec{x}_{\min} &= \myvec{2.64\\-4.52},
+\vec{x}_{\min} &= \myvec{5.5\\3.5},
 \\
-g\brak{\vec{x}_{\min}} &= 0.6
+g\brak{\vec{x}_{\min}} &= 3.53
 \end{align}
 %
 

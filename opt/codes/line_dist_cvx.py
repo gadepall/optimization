@@ -1,14 +1,16 @@
 #Code by GVV Sharma, 
 #Jan 13, 2020
+#Revised
+#March 9, 2023
 #Released under GNU GPL
 #Solving a quadratic program using cvx
 from cvxpy import *
 import numpy as np
 
 #Line parameters
-n =  np.array([3,-4]).reshape(2,-1)
-c = 26
-P = np.array([3,-5]).reshape(2,-1)
+n =  np.array([1,1]).reshape(2,-1)
+c = 9
+P = np.array([8,6]).reshape(2,-1)
 
 x = Variable((2,1))
 #Cost function
@@ -21,4 +23,5 @@ constraints = [n.T@x == c]
 Problem(obj, constraints).solve()
 
 print(np.sqrt(f.value),x.value)
+
 

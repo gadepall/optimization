@@ -1,0 +1,196 @@
+\iffalse
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{romannum}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+
+
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+
+\title{Assignment 5}
+\author{Jaswanth Chowdary Madala}
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+\item Find the perpendicular distance from the origin to the line $x – y = 4$ and angle between perpendicular and the positive x-axis.\\
+\textbf{Solution:} 
+\fi
+		The given problem can be expressed as a constrained optimization problem as 
+\begin{align}
+	\min_{\vec{x}}g\brak{\vec{x}} &= \norm{\vec{x}-\vec{P}}^2 \label{eq:11/10/3/3/3/grad/1} \\
+	\text{s.t.} \quad \vec{n}^T\vec{x} &= c
+\end{align}
+where
+\begin{align}
+	\vec{P} &= \myvec{0\\0}\\
+	\vec{n} &= \myvec{1\\-1}\\
+	c &= 4
+\end{align}
+The problem \eqref{eq:11/10/3/3/3/grad/1} can be modified into an unconstrained optimized problem as follows
+\begin{align}
+\min_{\lambda}f(\lambda) = \norm{\vec{A} + \lambda \vec{m}-\vec{P}}^2 \label{eq:11/10/3/3/3/grad/2}
+\end{align}
+where $\vec{m}$ is the direction vector of the given line and $\vec{A}$ is any point on the line.
+\begin{align}
+\vec{m} &= \myvec{-1 \\ 1}\\
+\vec{A} &= \myvec{4 \\ 0}
+\end{align}
+\begin{align}
+f(\lambda) & = \brak{ \lambda \vec{m}+\vec{A} -\vec{P}}^T \brak{ \lambda \vec{m}+\vec{A} -\vec{P}} \\
+&= \lambda^2 \norm{\vec{m}}^2 +2\lambda \vec{m}^T\brak{\vec{A} -\vec{P}} + \norm{\vec{A} -\vec{P}}^2
+\end{align}
+Here we have,
+\begin{align}
+f(\lambda) = 2\lambda^2 -8\lambda + 16 \label{eq:11/10/3/3/3/grad/3}
+\end{align}
+A numerical solution for \eqref{eq:11/10/3/3/3/grad/2} is obtained as
+\begin{align}
+\lambda_{n+1}&=\lambda_{n}-\alpha f^{\prime}\brak{\lambda_n}
+\end{align}
+where $\lambda_0$ is an inital guess and $\mu$ is a variable parameter. These parameters decide how fast the algorithm converges.
+
+From \eqref{eq:11/10/3/3/3/grad/3} we get
+\begin{align}
+\lambda_{n+1} &=\lambda_{n} -\alpha \brak{4\lambda_n-8}
+\end{align}
+By taking the parameters as listed in the below table
+\begin{table}[h]
+\centering
+\input{11/10/3/3/3/grad/tables/table1.tex}
+\caption{}
+\label{tab:11/10/3/3/3/grad/1}
+\end{table}
+
+$\lambda$ obtained is
+\begin{align}
+\lambda = 2
+\end{align}
+Hence, from equation \eqref{eq:11/10/3/3/3/grad/3} 
+\begin{align}
+f(2) = 8
+\end{align}
+Hence the perpendicular distance is $2\sqrt{2}$

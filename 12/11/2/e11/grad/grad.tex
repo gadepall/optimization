@@ -119,8 +119,11 @@ columns=fullflexible
 \vspace{3cm}
 
 
-\title{Assignment 5}
+\title{Assignment 1}
 \author{Jaswanth Chowdary Madala}
+
+
+
 
 
 % make the title area
@@ -136,54 +139,76 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{enumerate}
-\textbf{Solution:}
+\item Find the shortest distance between the lines $l_1$ and $l_2$ whose vector equations are ${\overrightarrow{r} = \hat{i}+\hat{j}+\lambda(2\hat{i}-\hat{j}+\hat{k})}$ and ${\overrightarrow{r} = 2\hat{i}+\hat{j}-\hat{k}+\mu(3\hat{i}-5\hat{j}+2\hat{k})}$
+
+\textbf{Solution:} The lines $l_1$ and $l_2$ in vector form can be written as
+\begin{align}
+\vec{x} &= \myvec{1\\1\\0} + \lambda_1\myvec{2\\-1\\1}\\
+\vec{x} &= \myvec{2\\1\\-1} + \lambda_2\myvec{3\\-5\\2}\\
+\vec{x_1} = \myvec{1\\1\\0},\, \vec{x_2} &= \myvec{2\\1\\-1}, \,\vec{m_1} = \myvec{2\\-1\\1}, \, \vec{m_2} = \myvec{3\\-5\\2}
+\end{align}
+The distance between the lines is given by,
+\begin{align}
+d &= \norm{\brak{\vec{x_2}+ \lambda_2\vec{m_2}} - \brak{\vec{x_1}+ \lambda_1\vec{m_1}}}\\
+\implies d &= \norm{\vec{x_2}-\vec{x_1}-\lambda_1\vec{m_1}+\lambda_2\vec{m_2}} \label{eq:12/11/2/e11/grad1}
+\end{align}
+Consider the following definitions
+\begin{align}
+\vec{A} &\triangleq \vec{x_2} - \vec{x_1} \label{eq:12/11/2/e11/grad2}\\
+\vec{M} &\triangleq \myvec{\vec{m_1} & \vec{m_2}} \label{eq:12/11/2/e11/grad3}\\
+\bm{\lambda} &\triangleq \myvec{\lambda_1\\-\lambda_2} \label{eq:12/11/2/e11/grad4}
+\end{align}
+From the above definitions \eqref{eq:12/11/2/e11/grad2}, \eqref{eq:12/11/2/e11/grad3}, \eqref{eq:12/11/2/e11/grad4} we get,
+\begin{align}
+d = \norm{\vec{A}-\vec{M}\bm{\lambda}}
+\end{align}
+Here we have the values of $\vec{A}, \vec{M}$ as
+\begin{align}
+\vec{M} &= \myvec{2&3\\-1&-5\\1&2}\\
+\vec{A} &= \myvec{1\\0\\-1}
+\end{align}
+Consider the function
+\begin{align}
+f\brak{\bm{\lambda}} = \norm{\vec{A}-\vec{M}\bm{\lambda}}^2
+\end{align}
+The given problem can be formulated as 
+\begin{align}
+\min_{\bm{\lambda}} f\brak{\bm{\lambda}} &= \bm{\lambda}^{\top}\vec{M}^\top\vec{M}\bm{\lambda} - 2\vec{A}^\top\vec{M}\bm{\lambda}+\norm{\vec{A}}^2 \label{eq:12/11/2/e11/grad5}
+\end{align}
+Here we have,
+\begin{align}
+\vec{M}^\top\vec{M} &= \myvec{6&13 \\ 13&38}\\
+\vec{A}^\top\vec{M} &= \myvec{1&1}\\
+\norm{\vec{A}}^2 &= 2
+\end{align}
 \fi
-  \begin{enumerate}
-  \item Using cvxpy method: The given problem can be formulated as 
+A numerical solution  is obtained as
 \begin{align}
-\min_{\vec{x}} Z &= \myvec{-3 & 4}\vec{x} \\
-\text{s.t.} \quad \vec{A}\vec{x} &\leq B
+\bm{\lambda}_{n+1}&=\bm{\lambda}_{n}-\alpha \nabla f\brak{\bm{\lambda_n}} \label{eq:12/11/2/e11/grad6}
 \end{align}
-where
+where $\lambda_0$ is an inital guess and $\alpha$ is a variable parameter. These parameters decide how fast the algorithm converges. Here the gradient is given by,
 \begin{align}
-A = \myvec{1&2 \\ 3&2 \\ -1&0 \\ 0&-1},\,
-B = \myvec{8\\12\\0\\0}
+\nabla f\brak{\bm{\lambda}} = 2\vec{M}^\top\vec{M} \bm{\lambda} - 2\brak{\vec{A}^\top\vec{M}}^\top
 \end{align}
-By solving using cvxpy, we get
+From \eqref{eq:12/11/2/e11/grad6} we get
 \begin{align}
-\min_{\vec{x}} Z &= -12 \\
-\vec{x} &= \myvec{4 \\0} 
+\bm{\lambda}_{n+1} &= \bm{\lambda}_{n} -\alpha \brak{2\vec{M}^\top\vec{M} \bm{\lambda}_n - 2\vec{M}^\top\vec{A}}
 \end{align}
-\item Using Corner point method:
-	See Fig. 
-\ref{fig:chapters/12/12/1/2/1}.
-\begin{figure}[ht]
-\centering
-\includegraphics[width = \columnwidth]{12/12/1/2/figs/fig.png}
-\caption{Graph}
-\label{fig:chapters/12/12/1/2/1}
-\end{figure}
-	The corner points of the inequalities are:
-\begin{align}
-\vec{P} = \myvec{0 \\ 0},\,
-\vec{Q} = \myvec{0 \\ 4},\,
-\vec{R} = \myvec{2 \\ 3},\,
-\vec{S} = \myvec{4 \\ 0} 
-\end{align}
-We have
-\begin{align}
-Z = – 3x + 4 y \label{eq:chapters/12/12/1/2/1}
-\end{align}
-Substituting above values of corner points in \eqref{eq:chapters/12/12/1/2/1} to get the value of $Z$, as shown in Table \ref{tab:12/12/1/2/1},
+By taking the parameters as listed in 
+\tabref{tab:12/11/2/e11/grad/1},
+%
 \begin{table}[h]
 \centering
-\input{12/12/1/2/tables/table1.tex}
+\input{12/11/2/e11/grad/tables/table1.tex}
 \caption{}
-\label{tab:12/12/1/2/1}
+\label{tab:12/11/2/e11/grad/1}
 \end{table}
-the optimum point and optimum value are 
 \begin{align}
-\vec{S} &=\myvec{4\\0}\\
-\min Z &= -12
+\bm{\lambda} &= \myvec{0.4237 \\-0.1186}
 \end{align}
-\end{enumerate}
+The shortest distance is
+\begin{align}
+\min_{\bm{\lambda}} d &= 1.3019  
+\end{align}
+
+

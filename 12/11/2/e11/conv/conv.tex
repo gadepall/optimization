@@ -119,8 +119,11 @@ columns=fullflexible
 \vspace{3cm}
 
 
-\title{Assignment 5}
+\title{Assignment 1}
 \author{Jaswanth Chowdary Madala}
+
+
+
 
 
 % make the title area
@@ -136,54 +139,51 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{enumerate}
-\textbf{Solution:}
+
+\textbf{Solution:} 
 \fi
-  \begin{enumerate}
-  \item Using cvxpy method: The given problem can be formulated as 
+		The lines $l_1$ and $l_2$ in vector form can be written as
 \begin{align}
-\min_{\vec{x}} Z &= \myvec{-3 & 4}\vec{x} \\
-\text{s.t.} \quad \vec{A}\vec{x} &\leq B
+\vec{x} &= \myvec{1\\1\\0} + \lambda_1\myvec{2\\-1\\1}\\
+\vec{x} &= \myvec{2\\1\\-1} + \lambda_2\myvec{3\\-5\\2}\\
+\vec{x_1} = \myvec{1\\1\\0},\, \vec{x_2} &= \myvec{2\\1\\-1}, \,\vec{m_1} = \myvec{2\\-1\\1}, \, \vec{m_2} = \myvec{3\\-5\\2}
 \end{align}
-where
+The distance between the lines is given by,
 \begin{align}
-A = \myvec{1&2 \\ 3&2 \\ -1&0 \\ 0&-1},\,
-B = \myvec{8\\12\\0\\0}
+d &= \norm{\brak{\vec{x_2}+ \lambda_2\vec{m_2}} - \brak{\vec{x_1}+ \lambda_1\vec{m_1}}}\\
+\implies d &= \norm{\vec{x_2}-\vec{x_1}-\lambda_1\vec{m_1}+\lambda_2\vec{m_2}} \label{eq:12/11/2/e11/conv1}
+\end{align}
+Consider the following definitions
+\begin{align}
+\vec{A} &\triangleq \vec{x_2} - \vec{x_1} ,\,
+\vec{M} &\triangleq \myvec{\vec{m_1} & \vec{m_2}} ,\,
+\bm{\lambda} &\triangleq \myvec{\lambda_1\\-\lambda_2} \label{eq:12/11/2/e11/conv4}
+\end{align}
+From  \eqref{eq:12/11/2/e11/conv4},
+\begin{align}
+d = \norm{\vec{A}-\vec{M}\bm{\lambda}}
+\end{align}
+Here we have the values of $\vec{A}, \vec{M}$ as
+\begin{align}
+\vec{M} &= \myvec{2&3\\-1&-5\\1&2},\,
+\vec{A} &= \myvec{1\\0\\-1}
+\end{align}
+The given problem can be formulated as 
+\begin{align}
+\min_{\bm{\lambda}} d^2 &= \bm{\lambda}^{\top}\vec{M}^\top\vec{M}\bm{\lambda} - 2\vec{A}^\top\vec{M}\bm{\lambda}+\vec{A}^\top\vec{A}\\
+\text{s.t.} \quad \bm{\lambda} &\in \mathbb{R}^2 
 \end{align}
 By solving using cvxpy, we get
 \begin{align}
-\min_{\vec{x}} Z &= -12 \\
-\vec{x} &= \myvec{4 \\0} 
+\min_{\bm{\lambda}} d &= 1.3019 \\
+\bm{\lambda} &= \myvec{0.4237 \\-0.1186} 
 \end{align}
-\item Using Corner point method:
-	See Fig. 
-\ref{fig:chapters/12/12/1/2/1}.
-\begin{figure}[ht]
+
+The shortest distance between the given lines is $1.3019$ units.
+
+\begin{figure}[!ht]
 \centering
-\includegraphics[width = \columnwidth]{12/12/1/2/figs/fig.png}
-\caption{Graph}
-\label{fig:chapters/12/12/1/2/1}
+\includegraphics[width=\columnwidth]{12/11/2/e11/conv/figs/skew.png}
+\caption{$PQ$ is the required shortest distance.}
+	\label{fig:12/11/2/e11/conv}
 \end{figure}
-	The corner points of the inequalities are:
-\begin{align}
-\vec{P} = \myvec{0 \\ 0},\,
-\vec{Q} = \myvec{0 \\ 4},\,
-\vec{R} = \myvec{2 \\ 3},\,
-\vec{S} = \myvec{4 \\ 0} 
-\end{align}
-We have
-\begin{align}
-Z = – 3x + 4 y \label{eq:chapters/12/12/1/2/1}
-\end{align}
-Substituting above values of corner points in \eqref{eq:chapters/12/12/1/2/1} to get the value of $Z$, as shown in Table \ref{tab:12/12/1/2/1},
-\begin{table}[h]
-\centering
-\input{12/12/1/2/tables/table1.tex}
-\caption{}
-\label{tab:12/12/1/2/1}
-\end{table}
-the optimum point and optimum value are 
-\begin{align}
-\vec{S} &=\myvec{4\\0}\\
-\min Z &= -12
-\end{align}
-\end{enumerate}

@@ -12,20 +12,20 @@
 \contentsline {section}{\numberline {4.3}KKT Conditions}{33}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Examples}{39}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Distance from a Line}{45}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Quadratic Programming}{83}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Definition}{83}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Semi-Definite Programming}{87}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Definition}{87}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Distance from a Conic}{91}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Geometric Programming}{117}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Definition}{117}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Examples}{118}{section.9.2}%
-\contentsline {chapter}{\numberline {10}Linear Programming}{125}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Definition}{125}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Applications}{138}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Miscellenaeous}{150}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Exemplar}{161}{chapter.11}%
-\contentsline {section}{Long Answer (L.A)}{161}{Item.194}%
-\contentsline {chapter}{\numberline {A}Convex Functions}{165}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Line}{171}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Manual}{173}{appendix.C}%
+\contentsline {chapter}{\numberline {6}Quadratic Programming}{87}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Definition}{87}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Semi-Definite Programming}{91}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Definition}{91}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Distance from a Conic}{95}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Geometric Programming}{121}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Definition}{121}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Examples}{122}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Linear Programming}{129}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Definition}{129}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Applications}{143}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Miscellenaeous}{155}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Exemplar}{165}{chapter.11}%
+\contentsline {section}{Long Answer (L.A)}{165}{Item.200}%
+\contentsline {chapter}{\numberline {A}Convex Functions}{169}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Line}{175}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Manual}{177}{appendix.C}%

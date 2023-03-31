@@ -1,4 +1,3 @@
-\iffalse
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{romannum}
 \usepackage{float}
@@ -119,8 +118,11 @@ columns=fullflexible
 \vspace{3cm}
 
 
-\title{Assignment 5}
+\title{Assignment 1}
 \author{Jaswanth Chowdary Madala}
+
+
+
 
 
 % make the title area
@@ -136,54 +138,87 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{enumerate}
-\textbf{Solution:}
-\fi
-  \begin{enumerate}
-  \item Using cvxpy method: The given problem can be formulated as 
+\item Find the shortest distance between the lines $l_1$ and $l_2$ whose vector equations are ${\overrightarrow{r} = \hat{i}+\hat{j}+\lambda(2\hat{i}-\hat{j}+\hat{k})}$ and ${\overrightarrow{r} = 2\hat{i}+\hat{j}-\hat{k}+\mu(3\hat{i}-5\hat{j}+2\hat{k})}$
+
+\textbf{Solution:} The lines $l_1$ and $l_2$ in vector form can be written as
 \begin{align}
-\min_{\vec{x}} Z &= \myvec{-3 & 4}\vec{x} \\
-\text{s.t.} \quad \vec{A}\vec{x} &\leq B
+\vec{x} &= \myvec{1\\1\\0} + \lambda_1\myvec{2\\-1\\1}\\
+\vec{x} &= \myvec{2\\1\\-1} + \lambda_2\myvec{3\\-5\\2}\\
+\vec{x_1} = \myvec{1\\1\\0},\, \vec{x_2} &= \myvec{2\\1\\-1}, \,\vec{m_1} = \myvec{2\\-1\\1}, \, \vec{m_2} = \myvec{3\\-5\\2}
 \end{align}
-where
+
+We first check whether the given lines are skew. The lines 
 \begin{align}
-A = \myvec{1&2 \\ 3&2 \\ -1&0 \\ 0&-1},\,
-B = \myvec{8\\12\\0\\0}
+\vec{x} = \vec{x_1} + \lambda_1\vec{m_1},\, \vec{x} = \vec{x_2} + \lambda_2\vec{m_2} 
+\label{eq:1}
 \end{align}
-By solving using cvxpy, we get
+intersect if
 \begin{align}
-\min_{\vec{x}} Z &= -12 \\
-\vec{x} &= \myvec{4 \\0} 
+\vec{M}\bm{\lambda} &= \vec{x_2} - \vec{x_1}\\
+\vec{M} &\triangleq \myvec{\vec{m_1} & \vec{m_2}} \\
+\bm{\lambda} &\triangleq \myvec{\lambda_1\\-\lambda_2}\\
 \end{align}
-\item Using Corner point method:
-	See Fig. 
-\ref{fig:chapters/12/12/1/2/1}.
-\begin{figure}[ht]
+Here we have,
+\begin{align}
+\vec{M} &= \myvec{2&3\\-1&-5\\1&2}\\
+\vec{x_2} - \vec{x_1} &= \myvec{1\\0\\-1}
+\end{align}
+We check whether the equation \eqref{eq:2} has a solution
+\begin{align}
+\myvec{2&3\\-1&-5\\1&2}\bm{\lambda} = \myvec{1\\0\\-1}
+\label{eq:2}
+\end{align}
+the augmented matrix is given by,
+\begin{align}
+\myvec{2&3&\vrule&1\\-1&-5&\vrule&0\\1&2&\vrule&-1}\\
+\xleftrightarrow[R_3 \leftarrow R_3 - \frac{1}{2}R_1]{R_2 \leftarrow R_2 + \frac{1}{2}R_1}\\
+\myvec{2&3&\vrule&1\\&&\vrule\\0&-\frac{7}{2}&\vrule&\frac{1}{2}\\&&\vrule\\0&\frac{1}{2}&\vrule&-\frac{3}{2}}\\
+\xleftrightarrow{R_3 \leftarrow R_3 + 7R_2}\\
+\myvec{2&3&\vrule&1\\&&\vrule\\0&-\frac{7}{2}&\vrule&\frac{1}{2}\\&&\vrule\\0&0&\vrule&-10}
+\end{align}
+The rank of the matrix is 3. So the given lines are skew.
+The closest points on two skew lines defined by \eqref{eq:1} are given by 
+\begin{align}
+\vec{M}^\top \vec{M}\bm{\lambda} &= \vec{M}^\top\brak{\vec{x_2}-\vec{x_1}}\\
+\myvec{2&-1&1\\3&-5&2} \myvec{2&3\\-1&-5\\1&2}\bm{\lambda} &= \myvec{2&-1&1\\3&-5&2} \myvec{1\\0\\-1}\\
+\myvec{6&13\\13&38}\bm{\lambda} &= \myvec{1\\1}
+\label{eq:3}
+\end{align}
+The augmented matrix of the above equation \eqref{eq:3} is given by,
+\begin{align}
+\myvec{6&13&\vrule&1\\13&38&\vrule&1}\\
+\xleftrightarrow{R_2 \leftarrow R_2 - \frac{13}{6}R_1}
+\end{align}
+\begin{align}
+\myvec{6&13&\vrule&1 \\&&\vrule\\ 0&\frac{59}{6}&\vrule&-\frac{7}{6}}\\
+\xleftrightarrow{R_1 \leftarrow R_1 - \frac{78}{59}R_2}\\
+\myvec{6&0&\vrule&\frac{150}{59} \\&&\vrule\\ 0&\frac{59}{6}&\vrule&-\frac{7}{6}}
+\end{align}
+So, we get
+\begin{align}
+\myvec{\lambda_1\\-\lambda_2} &= \myvec{\frac{25}{59}\\\\-\frac{7}{59}}
+\end{align}
+The closest points $\vec{A}$ on line $l_1$ and $\vec{B}$ on line $l_2$ are given by,
+\begin{align}
+\vec{A} &= \vec{x_1} + \lambda_1\vec{m_1}\\
+&=  \myvec{1\\1\\0} + \frac{25}{59}\myvec{2\\-1\\1}\\
+&= \frac{1}{59}\myvec{109\\34\\25}\\
+\vec{B} &= \vec{x_2} + \lambda_2\vec{m_2}\\
+&= \myvec{2\\1\\-1} + \frac{7}{59}\myvec{3\\-5\\2}\\
+&= \frac{1}{59}\myvec{139\\24\\-45}
+\end{align}
+The minimum distance between the lines is given by,
+\begin{align}
+\norm{\vec{B}-\vec{A}} &= \norm{\frac{1}{59}\myvec{30\\-10\\-70}}\\
+&= \frac{\sqrt{30^2+10^2+70^2}}{59}\\
+&= \frac{10}{\sqrt{59}}
+\end{align}
+The shortest distance between the given lines is $\frac{10}{\sqrt{59}}$ units.
+
+\begin{figure}[!ht]
 \centering
-\includegraphics[width = \columnwidth]{12/12/1/2/figs/fig.png}
-\caption{Graph}
-\label{fig:chapters/12/12/1/2/1}
+\includegraphics[width=\columnwidth]{./figs/skew.png}
+\caption{$AB$ is the required shortest distance.}
 \end{figure}
-	The corner points of the inequalities are:
-\begin{align}
-\vec{P} = \myvec{0 \\ 0},\,
-\vec{Q} = \myvec{0 \\ 4},\,
-\vec{R} = \myvec{2 \\ 3},\,
-\vec{S} = \myvec{4 \\ 0} 
-\end{align}
-We have
-\begin{align}
-Z = – 3x + 4 y \label{eq:chapters/12/12/1/2/1}
-\end{align}
-Substituting above values of corner points in \eqref{eq:chapters/12/12/1/2/1} to get the value of $Z$, as shown in Table \ref{tab:12/12/1/2/1},
-\begin{table}[h]
-\centering
-\input{12/12/1/2/tables/table1.tex}
-\caption{}
-\label{tab:12/12/1/2/1}
-\end{table}
-the optimum point and optimum value are 
-\begin{align}
-\vec{S} &=\myvec{4\\0}\\
-\min Z &= -12
-\end{align}
 \end{enumerate}
+\end{document}

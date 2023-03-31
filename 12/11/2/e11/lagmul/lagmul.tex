@@ -119,8 +119,11 @@ columns=fullflexible
 \vspace{3cm}
 
 
-\title{Assignment 5}
+\title{Assignment 1}
 \author{Jaswanth Chowdary Madala}
+
+
+
 
 
 % make the title area
@@ -136,22 +139,66 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{enumerate}
-\item Minimise $Z = – 3x + 4 y$\\
-subject to $x + 2y \leq 8, 3x + 2y \leq 12, x \geq 0, y \geq 0$.\\
-\textbf{Solution:} 
+\item Find the shortest distance between the lines $l_1$ and $l_2$ whose vector equations are ${\overrightarrow{r} = \hat{i}+\hat{j}+\lambda(2\hat{i}-\hat{j}+\hat{k})}$ and ${\overrightarrow{r} = 2\hat{i}+\hat{j}-\hat{k}+\mu(3\hat{i}-5\hat{j}+2\hat{k})}$
+
+\textbf{Solution:} The lines $l_1$ and $l_2$ in vector form can be written as
+\begin{align}
+\vec{x} &= \myvec{1\\1\\0} + \lambda_1\myvec{2\\-1\\1}\\
+\vec{x} &= \myvec{2\\1\\-1} + \lambda_2\myvec{3\\-5\\2}\\
+\vec{x_1} = \myvec{1\\1\\0},\, \vec{x_2} &= \myvec{2\\1\\-1}, \,\vec{m_1} = \myvec{2\\-1\\1}, \, \vec{m_2} = \myvec{3\\-5\\2}
+\end{align}
+The distance between the lines is given by,
+\begin{align}
+d &= \norm{\brak{\vec{x_2}+ \lambda_2\vec{m_2}} - \brak{\vec{x_1}+ \lambda_1\vec{m_1}}}\\
+\implies d &= \norm{\vec{x_2}-\vec{x_1}-\lambda_1\vec{m_1}+\lambda_2\vec{m_2}} \label{eq:12/11/2/e11/lagmul1}
+\end{align}
+Consider the following definitions
+\begin{align}
+\vec{A} &\triangleq \vec{x_2} - \vec{x_1} \label{eq:12/11/2/e11/lagmul2}\\
+\vec{M} &\triangleq \myvec{\vec{m_1} & \vec{m_2}} \label{eq:12/11/2/e11/lagmul3}\\
+\bm{\lambda} &\triangleq \myvec{\lambda_1\\-\lambda_2} \label{eq:12/11/2/e11/lagmul4}
+\end{align}
+From the above definitions \eqref{eq:12/11/2/e11/lagmul2}, \eqref{eq:12/11/2/e11/lagmul3}, \eqref{eq:12/11/2/e11/lagmul4} we get,
+\begin{align}
+d = \norm{\vec{A}-\vec{M}\bm{\lambda}}
+\end{align}
+Here we have the values of $\vec{A}, \vec{M}$ as
+\begin{align}
+\vec{M} &= \myvec{2&3\\-1&-5\\1&2}\\
+\vec{A} &= \myvec{1\\0\\-1}
+\end{align}
+Consider the function
+\begin{align}
+f\brak{\bm{\lambda}} = \norm{\vec{A}-\vec{M}\bm{\lambda}}^2
+\end{align}
 The given problem can be formulated as 
 \begin{align}
-\min_{\vec{x}} Z &= \myvec{-3 & 4}\vec{x} \\
-\text{s.t.} \quad \vec{A}\vec{x} &\leq B
+\min_{\bm{\lambda}} f\brak{\bm{\lambda}} &= \bm{\lambda}^{\top}\vec{M}^\top\vec{M}\bm{\lambda} - 2\vec{A}^\top\vec{M}\bm{\lambda}+\norm{\vec{A}}^2 \label{eq:12/11/2/e11/lagmul5}
 \end{align}
-where
+Here we have,
 \begin{align}
-A &= \myvec{1&2 \\ 3&2 \\ -1&0 \\ 0&-1}\\
-B &= \myvec{8\\12\\0\\0}
+\vec{M}^\top\vec{M} &= \myvec{6&13 \\ 13&38}\\
+\vec{A}^\top\vec{M} &= \myvec{1&1}\\
+\norm{\vec{A}}^2 &= 2
 \end{align}
-By solving using cvxpy, we get
+\fi
+As there are no constraints on $\bm{\lambda}$, using Lagrange multipliers,
 \begin{align}
-\min_{\vec{x}} Z &= -12 \\
-\vec{x} &= \myvec{4 \\0} 
+\nabla f\brak{\bm{\lambda}} = 0
 \end{align}
-\end{enumerate}
+Here we have the gradient as
+\begin{align}
+\nabla f\brak{\bm{\lambda}} &= 2\vec{M}^\top\vec{M} \bm{\lambda} - 2\brak{\vec{A}^\top\vec{M}}^\top = 0\\
+\implies \vec{M}^\top\vec{M} \bm{\lambda} &= \vec{M}^\top\vec{A}
+\label{eq:12/11/2/e11/lagmul6}
+\end{align}
+Solving \eqref{eq:12/11/2/e11/lagmul6} we get
+\begin{align}
+\bm{\lambda} &= \myvec{0.4237 \\-0.1186}
+\end{align}
+The shortest distance is
+\begin{align}
+\min_{\bm{\lambda}} d &= 1.3019  
+\end{align}
+This is also known as the least squares method.
+

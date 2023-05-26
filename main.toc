@@ -1,25 +1,25 @@
 \vskip -8pt
 \contentsline {schapter}{Introduction}{iii}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Distance from a Line}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Distance from a Conic}{47}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Geometric Programming}{73}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Examples}{73}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Linear Programming}{79}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Definition}{79}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Applications}{93}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Additional}{105}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Miscellaneous}{115}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Examples}{115}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Exemplar}{135}{chapter.6}%
-\contentsline {section}{Long Answer (L.A)}{135}{Item.154}%
-\contentsline {chapter}{\numberline {A}Convex Functions}{139}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Gradient Descent}{151}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Optimization}{153}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Lagrange Multipliers}{153}{section.C.1}%
-\contentsline {section}{\numberline {C.2}Inequality Constraints}{156}{section.C.2}%
-\contentsline {section}{\numberline {C.3}KKT Conditions}{161}{section.C.3}%
-\contentsline {chapter}{\numberline {D}Quadratic Programming}{167}{appendix.D}%
-\contentsline {chapter}{\numberline {E}Semi-Definite Programming}{171}{appendix.E}%
-\contentsline {chapter}{\numberline {F}Geometric Programming}{175}{appendix.F}%
-\contentsline {chapter}{\numberline {G}Line}{177}{appendix.G}%
-\contentsline {chapter}{\numberline {H}Manual}{179}{appendix.H}%
+\contentsline {chapter}{\numberline {2}Distance from a Conic}{45}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Geometric Programming}{71}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Examples}{71}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Linear Programming}{77}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definition}{77}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Applications}{91}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Additional}{103}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Miscellaneous}{113}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Examples}{113}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Exemplar}{133}{chapter.6}%
+\contentsline {section}{Long Answer (L.A)}{133}{Item.154}%
+\contentsline {chapter}{\numberline {A}Convex Functions}{137}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Gradient Descent}{149}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Optimization}{151}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Lagrange Multipliers}{151}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Inequality Constraints}{154}{section.C.2}%
+\contentsline {section}{\numberline {C.3}KKT Conditions}{159}{section.C.3}%
+\contentsline {chapter}{\numberline {D}Quadratic Programming}{165}{appendix.D}%
+\contentsline {chapter}{\numberline {E}Semi-Definite Programming}{169}{appendix.E}%
+\contentsline {chapter}{\numberline {F}Geometric Programming}{173}{appendix.F}%
+\contentsline {chapter}{\numberline {G}Line}{175}{appendix.G}%
+\contentsline {chapter}{\numberline {H}Manual}{177}{appendix.H}%

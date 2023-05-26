@@ -102,72 +102,33 @@ columns=fullflexible
 
 \solution 
 \fi
-Let the point $\vec{P}$ be the foot of the perpendicular on the line $7{x} - 9{y} - 19 = 0$ from point $\myvec{h\\3}$ (Let's say point $\vec{O}$).
-The optimization problem can be expressed as
-
+The direction vector of the given line is 
 \begin{align}
-    \label{eq:11/10/3/10/cvxpy/1}
-    \min_{\vec{x}} \norm{\vec{x}-\vec{O}}^2\\
-    \text{s.t.} \quad \vec{n}^\top\vec{x} = c
+     \myvec{9\\ 7}
 \end{align}
-
-where
+The direction vector of the desired line is 
+\begin{align}
+	\myvec{h-4 \\2}
+\end{align}
+Since the two lines are orthogonal, 
+\begin{align}
+	\myvec{h-4 & 2}
+	\myvec{9\\ 7} = 0 \implies h = \frac{22}{9}
+\end{align}
+The optimization problem can then be fomulated as 
+\eqref{eq:opt_line_dist}
+with 
 \begin{align}
     \vec{n} = \myvec{7 \\ -9},\,c = 19
+,\,
+	\vec{P} = \myvec{h \\ 3}= \myvec{\frac{22}{9} \\ 3}.
 \end{align}
-The line equation can be expressed as
+Using cvxpy, it can be verified that 
 \begin{align}
-    \label{eq:11/10/3/10/cvxpy/2}
-    \vec{x} = \vec{A}+\lambda\vec{m}
+	\vec{x} = \myvec{4 \\ 1}
 \end{align}
-where
-\begin{align}
-    \vec{m} = \myvec{9            \\ 7},\,
-    \vec{A} = \myvec{\frac{19}{7} \\ 0}
-\end{align}
-Using the parameric form, Substituting \eqref{eq:11/10/3/10/cvxpy/2} in \eqref{eq:11/10/3/10/cvxpy/1}, the optimization problem becomes
-\begin{align}
-    \min_{\lambda} \norm{ \lambda\vec{m} +\brak{\vec{A}-\vec{O}}}^2
-\end{align}
-
-\begin{align}
-    \begin{split}
-        \label{eq:11/10/3/10/cvxpy/3}
-        \ \implies \min_{\lambda}f\brak{\lambda} = \lambda^2\norm{\vec{m}}^2 + \\ 2\lambda\brak{\vec{A}-\vec{O}}^\top\vec{m} + \norm{\vec{A}-\vec{O}}^2 \
-    \end{split}
-\end{align}
-
-$\because$ the coefficient of $\lambda^2> 0$, \eqref{eq:11/10/3/10/cvxpy/3} is a convex function.
-Thus,
-\begin{align}
-    f^{\prime\prime}\brak{\lambda}                                            & = 2\norm{\vec{m}}^2             \\
-    \because f^{\prime\prime}\brak{\lambda} > 0, f^\prime\brak{\lambda_{min}} & = 0, \text{ for } \lambda_{min}
-\end{align}
-yielding
-\begin{align}
-                  & f^\prime\brak{\lambda_{min}} =  2\lambda_{min}\norm{\vec{m}}^2 + 2\brak{\vec{A}-\vec{O}}^\top\vec{m}  = 0 \\
-    \label{eq:11/10/3/10/cvxpy/4}
-    \lambda_{min} & = -\frac{\brak{\vec{A}-\vec{O}}^\top\vec{m}}{\norm{\vec{m}}^2}
-\end{align}
-
-It is given that the line through the points $\myvec{h \\ 3}$ and $\myvec{4 \\ 1}$ intersects the line $7{x} - 9{y} - 19 = 0$ at right angle. And the point $\myvec{4 \\ 1}$ is on the line $7{x} - 9{y} - 19 = 0$.
-
-From equation \eqref{eq:11/10/3/10/cvxpy/2}
-\begin{align}
-    \implies \myvec{4 \\ 1} &= \myvec{\frac{19}{7} \\ 0} + \lambda_{min}\myvec{9 \\ 7} \\
-    \implies \lambda_{min} &= \frac{1}{7} 
-\end{align}
-
-
-Substituting the values of $\vec{A}$, $\vec{O}$, $\lambda_{min}$ and $\vec{m}$ in equation \eqref{eq:11/10/3/10/cvxpy/4}
-\begin{align}
-    \frac{1}{7} &= -\frac{\brak{\myvec{\frac{19}{7} \\ 0} -\myvec{h \\ 3}}^\top\myvec{9 \\ 7}}{\norm{\myvec{9 \\ 7}^2}}\\
-    \implies \frac{130}{7} &= -\frac{171}{7} + 9{h} + 21\\
-    \implies h &= \frac{22}{9}
-\end{align}
-
-The relavent figure is \ref{fig:11/10/3/10/cvxpy/line}
-
+See \figref{fig:11/10/3/10/cvxpy/line}.
+%
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=\columnwidth]{11/10/3/10/cvxpy/figs/lines.png}
